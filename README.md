@@ -11,7 +11,7 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 ## Documentation
 See the pages [Here](http://pykey.jpconstantineau.com/#)
 
-You can contribute to the documentation by editing the markdown files located in the docs folder of the repository. 
+You can contribute to the documentation by editing the markdown files located in the docs folder of this repository. 
 
 ## Contributing
 
