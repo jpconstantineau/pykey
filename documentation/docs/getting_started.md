@@ -44,10 +44,7 @@ https://learn.adafruit.com/circuitpython-essentials
 
 ## Input Devices
 * Buttons: Single keys connected between GPIO and GND
-* Key Matrix: Matrix of keys with diodes. Columns and rows are connected to GPIOs: https://learn.adafruit.com/adafruit-neokey-5x6-ortho-snap-apart/circuitpython
-
-https://learn.adafruit.com/key-pad-matrix-scanning-in-circuitpython
-
+* Key Matrix: Matrix of keys with diodes. Columns and rows are connected to GPIOs: [5x6](https://learn.adafruit.com/adafruit-neokey-5x6-ortho-snap-apart/circuitpython) [keypad](https://learn.adafruit.com/key-pad-matrix-scanning-in-circuitpython
 * Rotary Encoders: A and B connected to GPIOs.
 * Potentiometers: An Analog value...
 * Nunchuck and other digital input devices

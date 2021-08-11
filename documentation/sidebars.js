@@ -4,6 +4,6 @@ module.exports = {
     'Features': ['features'],
     'Hardware': ['testing_hardware/basic',
                  'testing_hardware/encoders',
-                 'testing_hardware/analog']
+                 'testing_hardware/analog','testing_hardware/keymatrix']
   },
 };
