@@ -14,9 +14,9 @@ List of implemented features
 | Low Latency BLE Support                                                                                                |     🚧    | 
 | Multi-Device BLE Support (Several Computers)                                                                           |     ❓     | 
 | USB HID                                                                                                                |     ✅     | 
-| Battery Reporting (BLE Battery Service)                                                                                |     ❓     | 
+| Battery Reporting (BLE Battery Service)                                                                                |     🚧     | 
 | Low Power Sleep States                                                                                                 |     ❓     |
-| Low Active Power Usage                                                                                                 |            |
+| Low Active Power Usage                                                                                                 |     ❓       |
 | **Firmware Options**                                                                                                   |            | 
 | Keymaps and Layers                                                                                                     |     🚧     | 
 | Basic Keycodes                                                                                                         |     ✅     | 
@@ -40,10 +40,10 @@ List of implemented features
 | Support for Wide Range of ARM Microcontrollers  [^1]                                                                   |     ✅     | 
 | Support for AVR/8 Bit Microcontrollers                                                                                 |     ❌     | 
 | **Tooling and Build Configuration**                                                                                    |            |    
-| Serial Debug CLI                                                                                                       |      ✅   |    
+| Serial Debug CLI [^2]                                                                                                      |      ✅   |    
 | Web Bluetooth Configuration                                                                                            |      💡    |  
 | Hardware Troubleshooting tools                                                                                         |      ✅   |   
-| Realtime Keymap Updating                                                                                               |      💡     | 
+| Realtime Keymap Updating                                                                                               |      ✅     | 
 
 
 This __Features Compared__ page is licenced under [CC-BY-NC-SA-4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) and was adapted from [ZMK Firmware Documentation](https://zmkfirmware.dev/docs/) originally created by the ZMK Project Contributors.
@@ -51,6 +51,7 @@ This __Features Compared__ page is licenced under [CC-BY-NC-SA-4.0](https://crea
 **Notes**
 
 [^1]: Requires CircuitPython Support
+[^2]: REPL
 
 [Makerdiary Python Keyboard](https://github.com/makerdiary/python-keyboard) (MIT License)
 
