@@ -29,15 +29,16 @@ Needs the following modules:
 Need the following libraries:
 
 
-From: https://learn.adafruit.com/circuitpython-essentials/circuitpython-pins-and-modules
+From:[here](https://learn.adafruit.com/circuitpython-essentials/circuitpython-pins-and-modules) 
 
+``` python
 import board
 dir(board)
-
+```
 
 
 # Read basics
-https://learn.adafruit.com/circuitpython-essentials
+[Essentials](https://learn.adafruit.com/circuitpython-essentials)
 
 
 # Hardware Setup
