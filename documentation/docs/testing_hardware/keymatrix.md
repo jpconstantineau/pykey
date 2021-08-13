@@ -7,11 +7,11 @@ sidebar_label: Key Matrix
 
 Most keyboards use a matrix of columns and rows to scan each key.  You will need to refer to the keyboard schematic to identify how many columns and rows your keyboard uses for it's scanning matrix.  The scanning matrix may differ from the keyboard layout.  For example, a 4x12 matrix uses 16 GPIOs and allows for 48 keys to be scanned.  A 8x8 matrix also uses 16 GPIOs but will allow 64 keys to be scanned.
 
-![keyboard matrix](http://pikey.jpconstantineau.com/img/keyboardmatrix.png)
+![keyboard matrix](/img/keyboardmatrix.png)
 
 Next, we need to identify how each row and column are mapped to the microntroller on board of the nRF52 module you use.  Since most DIY keyboards use the Arduino Pro Micro as its controller, we are using such an example.
 
-![GPIO Mapping](http://pikey.jpconstantineau.com/img/gpiomapping.png)
+![GPIO Mapping](/img/gpiomapping.png)
 
 With the information from both the keyboard and controller schamatics, we can map each row and column to the GPIO and define the configuration needed.
 

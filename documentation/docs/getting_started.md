@@ -6,8 +6,6 @@ slug: /
 ---
 
 
-# Getting Started
-
 Get some supported hardware.
 Get a supported version of CircuitPython.  Download it [here](https://circuitpython.org/downloads).  PyKey uses features included in CircuitPython 7.0.0.
 
