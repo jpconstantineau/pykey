@@ -5,9 +5,6 @@ sidebar_label: Getting Started
 slug: /
 ---
 
-Not sure yet...  Work in Progress.
-
-
 
 # Getting Started
 
@@ -31,10 +28,7 @@ Need the following libraries:
 
 From:[here](https://learn.adafruit.com/circuitpython-essentials/circuitpython-pins-and-modules) 
 
-``` python
-import board
-dir(board)
-```
+
 
 
 # Read basics
