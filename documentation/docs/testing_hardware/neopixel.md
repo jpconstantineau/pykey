@@ -1,6 +1,6 @@
 ---
 id: neopixels
-title: NeoPixels: RGB LEDs
+title: NeoPixels - RGB LEDs
 sidebar_label: RGB LEDs
 ---
 
