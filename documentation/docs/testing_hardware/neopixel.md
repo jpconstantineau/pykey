@@ -13,6 +13,7 @@ import board
 import neopixel
 import rainbowio
 
+# Hardware definition: GPIO where RGB LED is connected. 
 pixel_pin = board.P0_15
 num_pixels = 8
 

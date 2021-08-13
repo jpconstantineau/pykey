@@ -4,8 +4,11 @@ title: Rotary Encoders
 sidebar_label: Rotary Encoders
 ---
 
+## Rotary Encoder
+
 For basic information on rotary encoders, refer to this great tutorial from [Adafruit](https://learn.adafruit.com/rotary-encoder)
 
+## Basic Test
 
 ``` python
 import board
