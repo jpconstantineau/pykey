@@ -1,3 +1,4 @@
+#pylint: disable = line-too-long
 from digitalio import DigitalInOut, Direction
 
 class LEDMatrix:
@@ -45,11 +46,6 @@ class LEDMatrix:
         else:
             colIOLED.value = False
             rowIOLED.value = True
-        
+
     def led_OFF(self):
         self.reset_leds()
-        
-        
-
-# LEDs(pins: Sequence[microcontroller.Pin], *, value_when_on: bool)
-# row * len(column_pins) + column

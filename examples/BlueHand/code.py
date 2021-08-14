@@ -1,3 +1,4 @@
+#pylint: disable = line-too-long
 import board
 import keypad
 import pwmio
@@ -15,11 +16,11 @@ keys = keypad.Keys(pins=(board.P0_29,board.P0_02,board.P0_28,board.P0_03,board.P
 
 # End of Setup Music
 buzzer.duty_cycle = ON
-buzzer.frequency = 440 # 
+buzzer.frequency = 440
 time.sleep(0.05)
-buzzer.frequency = 880 # 
+buzzer.frequency = 880
 time.sleep(0.05)
-buzzer.frequency = 440 # 
+buzzer.frequency = 440
 time.sleep(0.05)
 buzzer.duty_cycle = OFF
 

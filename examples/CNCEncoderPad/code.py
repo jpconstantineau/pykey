@@ -1,20 +1,21 @@
+#pylint: disable = line-too-long
+import time
 import alarm
 import board
 import rotaryio
 import keypad
 import usb_hid
-import time
 import pwmio
 from adafruit_hid.keyboard import Keyboard
 from KC import Keycode as KC
 import lights
 
-""" 
+"""
 CNCEncoderPad
 #define MATRIX_ROW_PINS { 6, 45, 28 }
 #define MATRIX_COL_PINS { 9, 13, 38 }
-#define ENCODER_PAD_A  26 
-#define ENCODER_PAD_B  30 
+#define ENCODER_PAD_A  26
+#define ENCODER_PAD_B  30
 
 #define VBAT_PIN  4
 #define VCC_PIN 12
@@ -28,7 +29,6 @@ CNCEncoderPad
 #define LEDROW0 10
 #define LEDROW1 20
 #define LEDROW2 24
-
 """
 
 # define audio hardware
@@ -56,7 +56,7 @@ last_position = 0
 
 # setup variables
 keyboard = Keyboard(usb_hid.devices)
-#keyboard_layout = KeyboardLayoutUS(keyboard) 
+#keyboard_layout = KeyboardLayoutUS(keyboard)
 
 
 layer = 0
@@ -70,11 +70,11 @@ encoder_map = ((KC.DOWN,KC.UP),
 
 # End of Setup Music
 buzzer.duty_cycle = ON
-buzzer.frequency = 440 # 
+buzzer.frequency = 440
 time.sleep(0.05)
-buzzer.frequency = 880 # 
+buzzer.frequency = 880
 time.sleep(0.05)
-buzzer.frequency = 440 # 
+buzzer.frequency = 440
 time.sleep(0.05)
 buzzer.duty_cycle = OFF
 

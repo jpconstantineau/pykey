@@ -1,3 +1,4 @@
+#pylint: disable = line-too-long
 from digitalio import DigitalInOut, Direction
 
 class LEDMatrix:

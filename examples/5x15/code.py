@@ -1,6 +1,7 @@
+#pylint: disable = line-too-long
+import time
 import board
 import keypad
-import time
 import usb_hid
 from adafruit_hid.keyboard import Keyboard
 from keycode import PK_Keycode as KC
