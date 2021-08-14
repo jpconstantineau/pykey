@@ -1,0 +1,23 @@
+name: pylint
+
+on: [pull_request, push, repository_dispatch]
+
+jobs:
+  pylint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Python 3.6
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.6
+    - name: Versions
+      run: |
+        python3 --version
+    - name: Pip install pylint
+      run: |
+        pip install --force-reinstall pylint==2.7.1
+    - name: Checkout Current Repo
+      uses: actions/checkout@v2
+
+    - name: lint
+      run: ./pylint_check.sh
