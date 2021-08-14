@@ -24,3 +24,5 @@ while True:
     last_position = position
 
 ``` 
+
+If you want to see an example of how to read a retary encoder, see this [video](https://youtu.be/4BNkuLonIVM?list=PLjF7R1fz_OOWFqZfqW9jlvQSIUmwn9lWr)

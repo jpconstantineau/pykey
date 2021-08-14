@@ -6,7 +6,7 @@ sidebar_label: Libraries Needed
 
 The PyKey firmware needs a number of libraries to be available on the board for it to run.
 
-| **Library/Module**                                                   |  Import             | Files/Folder needed |
+| **Library/Module**                                                   |  Import (with link to docs)            | Files/Folder needed |
 | :------------------------------------------------------------------- |  :-------           |  :-------    | 
 | **Default Modules**                                                  |                     |              |
 | GPIO Definition                                                      |  [import board](https://circuitpython.readthedocs.io/en/latest/shared-bindings/board/index.html)       |              |
@@ -18,9 +18,13 @@ The PyKey firmware needs a number of libraries to be available on the board for 
 | Rotary Encoders                                                      |  [import rotaryio](https://circuitpython.readthedocs.io/en/latest/shared-bindings/rotaryio/index.html)    |              |
 | Sleep/delay                                                          |  [import time](https://circuitpython.readthedocs.io/en/latest/shared-bindings/time/index.html)        |              |
 | USB Human Interface Device Definition                                |  [import usb_hid](https://circuitpython.readthedocs.io/en/latest/shared-bindings/usb_hid/index.html)     |              |
-|  **CircuitPython Library Bundle**                                    |                     |              |
+|  [**Adafruit CircuitPython Library Bundle**](https://circuitpython.org/libraries)                                   |                     |              |
 | Keyboard USB HID                                                     |  from [adafruit_hid.keyboard](https://circuitpython.readthedocs.io/projects/hid/en/latest/api.html) import Keyboard    | adafruit_hid |
 | RGB LEDs - Access                                                    |  [import neopixel](https://circuitpython.readthedocs.io/projects/neopixel/en/latest/api.html)    | neopixel.mpy |
+
+
+PyKey uses libraries from the [Adafruit CircuitPython Library Bundle 7.x](https://circuitpython.org/libraries).
+
 
 
 Installing Libraries is as simple as copying the files into the lib folder.

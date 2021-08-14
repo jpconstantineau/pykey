@@ -15,6 +15,8 @@ import board
 dir(board)
 ```
 
+See some simple example in a [video](https://youtu.be/M7GHp6md2Qc?list=PLjF7R1fz_OOWFqZfqW9jlvQSIUmwn9lWr)
+
 You will get a list of the identifiers on how to call each GPIO for your controller.  These identifiers are what you need when defining the connections to the keyboard.
 
 ## Test Outputs: LEDs
@@ -69,9 +71,10 @@ while True:
 ```
 
 By pressing the switch, you will turn on the LED.
+See a similar example in a [video](https://youtu.be/37R2OVGrV2w?list=PLjF7R1fz_OOWFqZfqW9jlvQSIUmwn9lWr)
 
 
-
+PWM Video example: [here](https://youtu.be/Kelr2DD39g8?list=PLjF7R1fz_OOWFqZfqW9jlvQSIUmwn9lWr)
 
 All you need to
 

@@ -6,7 +6,8 @@ module.exports = {
                  'testing_hardware/encoders',
                  'testing_hardware/analog',
                  'testing_hardware/keymatrix',
-                 'testing_hardware/neopixels'],
+                 'testing_hardware/neopixels',
+                 'testing_hardware/sound'],
    'Setup': ['setup/libraries']
   },
 };
