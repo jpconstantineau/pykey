@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 PYLINT="`type -p pylint3 2>/dev/null || type -p pylint`"
