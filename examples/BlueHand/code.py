@@ -1,8 +1,9 @@
 #pylint: disable = line-too-long
+import time
 import board
 import keypad
 import pwmio
-import time
+
 
 # define audio hardware
 buzzer = pwmio.PWMOut(board.P1_13, variable_frequency=True)
