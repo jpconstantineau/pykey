@@ -20,4 +20,5 @@ jobs:
       uses: actions/checkout@v2
 
     - name: lint
-      run: ./pylint_check.sh
+      run: |
+        find . -name '*.py' -exec pylint {} \;
