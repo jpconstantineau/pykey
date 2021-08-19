@@ -1,0 +1,1 @@
+This code is from [Adafruit Learning Guide](https://learn.adafruit.com/macropad-hotkeys/overview)
