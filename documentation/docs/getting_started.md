@@ -8,36 +8,25 @@ slug: /
 
 Get some supported hardware.
 Get a supported version of CircuitPython.  Download it [here](https://circuitpython.org/downloads).  PyKey uses features included in CircuitPython 7.0.0.
-
-Latest builds are available [here](https://adafruit-circuit-python.s3.amazonaws.com/index.html?prefix=bin/)
-
-Needs the following modules:
-* analogio
-* board
-* digitalio
-* keypad
-* pwmio
-* rotaryio
-* time
-* usb_hid
-
-Need the following libraries:
+You can download the Absolute Newest (automated builds) or the latest 7.0.0 alpha (release). Don't download a 6.x release as some of the necessary modules have only been included since 7.0.0.
 
 
-From:[here](https://learn.adafruit.com/circuitpython-essentials/circuitpython-pins-and-modules) 
+You will also need to download the libraries from [here](https://circuitpython.org/libraries).
 
 
 
+# Read the basics
 
-# Read basics
-[Essentials](https://learn.adafruit.com/circuitpython-essentials)
+Adafruit has created great documentation on how to start with CircuitPython:
 
+* [Essentials](https://learn.adafruit.com/circuitpython-essentials)
+* [Pins and Modules](https://learn.adafruit.com/circuitpython-essentials/circuitpython-pins-and-modules) 
 
 # Hardware Setup
 
 ## Input Devices
 * Buttons: Single keys connected between GPIO and GND
-* Key Matrix: Matrix of keys with diodes. Columns and rows are connected to GPIOs: [5x6](https://learn.adafruit.com/adafruit-neokey-5x6-ortho-snap-apart/circuitpython) [keypad](https://learn.adafruit.com/key-pad-matrix-scanning-in-circuitpython
+* Key Matrix: Matrix of keys with diodes. Columns and rows are connected to GPIOs: [5x6](https://learn.adafruit.com/adafruit-neokey-5x6-ortho-snap-apart/circuitpython) [keypad](https://learn.adafruit.com/key-pad-matrix-scanning-in-circuitpython)
 * Rotary Encoders: A and B connected to GPIOs.
 * Potentiometers: An Analog value...
 * Nunchuck and other digital input devices
@@ -61,7 +50,7 @@ From:[here](https://learn.adafruit.com/circuitpython-essentials/circuitpython-pi
 
 ## HID Connections
 * USB HID
-* BLE HID - https://learn.adafruit.com/ble-hid-keyboard-buttons-with-circuitpython
+* [BLE HID](https://learn.adafruit.com/ble-hid-keyboard-buttons-with-circuitpython)
 
 # Keymap Setup
 
