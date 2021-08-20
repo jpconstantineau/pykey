@@ -8,7 +8,7 @@ from adafruit_hid.keyboard import Keyboard
 from keycode import PK_Keycode as KC
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 
-# Hardware definition: GPIO where RGB LED is connected. 
+# Hardware definition: GPIO where RGB LED is connected.
 pixel_pin = board.P0_15
 num_pixels = 1
 
@@ -33,9 +33,13 @@ class Layer:
 
 # Load all the macro key setups from .py files in MACRO_FOLDER
 layers = []
+
+
+
 files = os.listdir(MACRO_FOLDER)
 files.sort()
 for filename in files:
+    # print(filename)
     if filename.endswith('.py'):
         try:
             module = __import__(MACRO_FOLDER + '/' + filename[:-3])
@@ -49,8 +53,8 @@ if not layers:
     while True:
         pass
 
-
-
+layer_count = len(layers)
+# print(layer_count)
 pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.3, auto_write=False)
 
 
@@ -67,30 +71,56 @@ def update_pixels(color):
     for i in range(num_pixels):
         pixels[i] = color
     pixels.show()
-        
 
+def get_active_layer(layer_keys_pressed, layer_count):
+    tmp = 0
+    if len(layer_keys_pressed)>0:
+        for layer_id in layer_keys_pressed:
+            if layer_id > tmp: # use highest layer number
+                tmp = layer_id
+    if tmp >= layer_count:
+        tmp = layer_count-1
+    return tmp
 
 keyboard = Keyboard(usb_hid.devices)
 keyboard_layout = KeyboardLayoutUS(keyboard)
-
+active_keys = []
 while True:
     key_event = keys.events.get()
     if key_event:
         key_number = key_event.key_number
+        
+        # keep track of keys being pressed for layer determination
+        if key_event.pressed:
+            active_keys.append(key_number)
+        else:
+            active_keys.remove(key_number)
+
+        # reset the layers and identify which layer key is pressed.
+        layer_keys_pressed = []
+        for active_key in active_keys:
+            group = layers[0].macros[active_key][2]
+            for item in group:
+                if isinstance(item, int):
+                    if (item >= KC.LAYER_0) and (item <= KC.LAYER_F) :
+                        layer_keys_pressed.append(item - KC.LAYER_0)
+        layer_index = get_active_layer(layer_keys_pressed, layer_count)
+        # print(layer_index)
         # print(layers[layer_index].macros[key_number][1])
         group = layers[layer_index].macros[key_number][2]
+        color = layers[layer_index].macros[key_number][0]
         if key_event.pressed:
-            update_pixels(0x400000) 
+            update_pixels(color)
             for item in group:
                 if isinstance(item, int):
                     keyboard.press(item)
                 else:
-                    keyboard_layout.write(item)  
+                    keyboard_layout.write(item)
         else:
             for item in group:
                 if isinstance(item, int):
                     if item >= 0:
                         keyboard.release(item)
-            update_pixels(0x004000) 
+            update_pixels(0x000000)
     time.sleep(0.002)
- 
+
