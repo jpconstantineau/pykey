@@ -27,8 +27,6 @@ keys = keypad.KeyMatrix(
 )
 
 
-layer_index = 0
-
 # CONFIGURABLES ------------------------
 
 MACRO_FOLDER = '/layers'
@@ -42,6 +40,13 @@ class Layer:
     def __init__(self, layerdata):
         self.name = layerdata['name']
         self.macros = layerdata['macros']
+
+
+# Neopixel update function
+def update_pixels(color):
+    for i in range(num_pixels):
+        pixels[i] = color
+    pixels.show()
 
 
 # INITIALIZATION -----------------------
@@ -70,12 +75,6 @@ if not layers:
 layer_count = len(layers)
 # print(layer_count)
 
-# Neopixel update function
-def update_pixels(color):
-    for i in range(num_pixels):
-        pixels[i] = color
-    pixels.show()
-
 def get_active_layer(layer_keys_pressed, layer_count):
     tmp = 0
     if len(layer_keys_pressed)>0:
@@ -86,13 +85,13 @@ def get_active_layer(layer_keys_pressed, layer_count):
         tmp = layer_count-1
     return tmp
 
+
+# setup variables
 keyboard = Keyboard(usb_hid.devices)
 keyboard_layout = KeyboardLayoutUS(keyboard)
 active_keys = []
-
-# setup variables
 not_sleeping = True
-
+layer_index = 0
 
 while not_sleeping:
     key_event = keys.events.get()

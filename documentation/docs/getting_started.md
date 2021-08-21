@@ -5,30 +5,56 @@ sidebar_label: Getting Started
 slug: /
 ---
 
+# What is PyKey?
 
+**PyKey** or "**Py**thon**Key**board" is a CircuitPython firmware based on the various examples contained in the [Adafruit learning guides](https://learn.adafruit.com/guides/popular) available in their [GitHub reporitory](https://github.com/adafruit/Adafruit_Learning_System_Guides).
+
+
+## Why CircuitPython and not C/C++?
+Many Keyboard firmwares are available in C/C++.  Take for example TMK, QMK, BlueMicro_BLE, ZMK and many others.  They all implement a firmware that combine the low-level hardware scanning as well as the high-level keyboard functionality that users want.
+
+With PyKey, the aim is on keeping it simple and away from the hardware-specific details and focussed on the high level keyboard logic.  This therefore makes it portable from one platform to another with minimal code chhanges.
+
+With CircuitPython 7.0.0, the most frequently called code in a keyboard firmware (the key scanning and debouncing routines) has been embedded within the core of CircuitPython (in the keypad module) and runs as compiled C++ code.  This reduces significantly the amount of Python code that continuously run waiting for keys to be pressed; thus improving performance.
+
+
+# Getting Started
 ## Get some supported hardware. 
 
-Lots of hardware can run PyKey! Keyboards that support one of the boards listed in the [CircuitPython Downloads](https://circuitpython.org/downloads) is a good start. 
+ Lots of hardware supports CircuitPython. Currently, 226 boards support it.  Not all are destined to be keyboards. 
+ Keyboards that support one of the breakout boards listed in the [CircuitPython Downloads](https://circuitpython.org/downloads) is a good start.  There are even macropads in the list.
+
+ Here are a few examples in pictures:
+
+| | | |
+| :---: | :---: |  :---: | 
+| [![Pico](https://circuitpython.org/assets/images/boards/small/raspberry_pi_pico.jpg)](https://circuitpython.org/board/raspberry_pi_pico/)    | [![Feather840](https://circuitpython.org/assets/images/boards/small/feather_nrf52840_express.jpg) ](https://circuitpython.org/board/feather_nrf52840_express/)| [![ItsyBitsy M4](https://circuitpython.org/assets/images/boards/small/itsybitsy_m4_express.jpg)](https://circuitpython.org/board/itsybitsy_m4_express/)
+| [![blueMicro840](https://circuitpython.org/assets/images/boards/small/bluemicro840.jpg)](https://circuitpython.org/board/bluemicro840/) | [![NiceNano](https://circuitpython.org/assets/images/boards/small/nice_nano.jpg) ](https://circuitpython.org/board/nice_nano/)                  |  [![Pro micro RP2040](https://circuitpython.org/assets/images/boards/small/sparkfun_pro_micro_rp2040.jpg)](https://circuitpython.org/board/sparkfun_pro_micro_rp2040/)
+| [![macropad](https://circuitpython.org/assets/images/boards/small/adafruit_macropad_rp2040.jpg)](https://circuitpython.org/board/adafruit_macropad_rp2040/) | [![trellis](https://circuitpython.org/assets/images/boards/small/trellis_m4_express.jpg)](https://circuitpython.org/board/trellis_m4_express/) | [![keybow](https://circuitpython.org/assets/images/boards/small/pimoroni_keybow2040.jpg)](https://circuitpython.org/board/pimoroni_keybow2040/)
+
 
 ## Install CircuitPython on it
 
-Go [here](https://circuitpython.org/downloads) and download the latest CircuitPython for you hardware.  PyKey uses features included in CircuitPython 7.0.0.  You can download the Absolute Newest (automated builds) or the latest 7.0.0 alpha (release). Don't download a 6.x release as some of the necessary modules have only been included since 7.0.0.
+Go [here](https://circuitpython.org/downloads) and download the latest CircuitPython for your hardware.  PyKey uses features included in CircuitPython 7.0.0.  You can download the Absolute Newest (automated builds) or the latest 7.0.0 alpha (release). Don't download a 6.x release as some of the necessary modules have only been included since 7.0.0.
 
 ## Download and Install the CircuitPython Libraries
 
 You will need to download the libraries from [here](https://circuitpython.org/libraries).
-Since there are hundreds of different libraries included in the package, they generally won't fit if you copy them all to yur board. As such, you only need to copy the ones that are needed.
+Since there are hundreds of different libraries included in the package, they generally won't fit if you copy them all to your board. As such, you only need to copy the ones that are needed.
 
 ## Read the basics of CircuitPython
 
 Adafruit has created great documentation on how to start with CircuitPython:
 
+* [What is CicuitPython](https://learn.adafruit.com/welcome-to-circuitpython)
 * [Essentials](https://learn.adafruit.com/circuitpython-essentials)
 * [Pins and Modules](https://learn.adafruit.com/circuitpython-essentials/circuitpython-pins-and-modules) 
 
-## Hardware Setup
+# Possible Hardware
 
-### Input Devices
+## Input Devices
+
+A number of input devices and methods can be used with CircuitPython:
 * Buttons: Single keys connected between GPIO and GND
 * Key Matrix: Matrix of keys with diodes. Columns and rows are connected to GPIOs: [5x6](https://learn.adafruit.com/adafruit-neokey-5x6-ortho-snap-apart/circuitpython) [keypad](https://learn.adafruit.com/key-pad-matrix-scanning-in-circuitpython)
 * Rotary Encoders: A and B connected to GPIOs.
@@ -37,26 +63,31 @@ Adafruit has created great documentation on how to start with CircuitPython:
 * Battery Level: Analog read of battery voltage.
 * USB Connection: is it connected to computer through USB?
 
-### Output devices
+## Output devices
+
+Similarly to input devicecs, CircuitPython supports a vast array of feedback methods to the user:
+
 * LED: Single LED connected to GPIO
 * PWM LED: A number of LEDs connected to a Mosfet for PWM intensity control.
 * LED Matrix: matrix of LEDs, Columns and Rows are connected to GPIOs
 * RGB LEDs: addressable LEDs.
-* Speaker: Single speaker connected to as GPIO
+* Speaker: Single speaker connected to a GPIO
 * Displays: Too many types to count...
 * Serial port: useful for debugging...
 
-### HID Profiles
+## HID Profiles
+Human Interface Devices define multiple interfaces for interacting with computers:
+
 * Keyboard - standard keycodes
 * Keyboard - consumer
 * Mouse
 * Gamepad
 
-### HID Connections
+## HID Connections
+
+CircuitPython supports both USB and Bluetooth.
+
 * USB HID
 * [BLE HID](https://learn.adafruit.com/ble-hid-keyboard-buttons-with-circuitpython)
 
-## Keymap Setup
-
-## Main Loop
 

@@ -4,11 +4,12 @@ title: Libraries Needed
 sidebar_label: Libraries Needed
 ---
 
-The PyKey firmware needs a number of libraries to be available on the board for it to run.
+PyKey needs a number of libraries to be available on the board for it to run.
 
 | **Library/Module**                                                   |  Import (with link to docs)            | Files/Folder needed |
 | :------------------------------------------------------------------- |  :-------           |  :-------    | 
 | **Default Modules**                                                  |                     |              |
+| Saved Keymnap Definitions | [import os](https://circuitpython.readthedocs.io/en/latest/shared-bindings/os/index.html) | |
 | GPIO Definition                                                      |  [import board](https://circuitpython.readthedocs.io/en/latest/shared-bindings/board/index.html)       |              |
 | GPIO Access                                                          |  [import digitalio](https://circuitpython.readthedocs.io/en/latest/shared-bindings/digitalio/index.html)   |              |
 | Key Matrix and Switches                                              |  [import keypad](https://circuitpython.readthedocs.io/en/latest/shared-bindings/keypad/index.html)      |              |
@@ -24,7 +25,6 @@ The PyKey firmware needs a number of libraries to be available on the board for 
 
 
 PyKey uses libraries from the [Adafruit CircuitPython Library Bundle 7.x](https://circuitpython.org/libraries).
+These are pre-compiled libraries in mpy format (a binary format representing the pre-compiled Python code)
 
-
-
-Installing Libraries is as simple as copying the files into the lib folder.
+Installing Libraries is as simple as copying the necessary files into the lib folder of your CircuitPython device.
