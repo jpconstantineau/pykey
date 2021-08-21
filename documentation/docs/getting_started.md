@@ -7,15 +7,17 @@ slug: /
 
 # What is PyKey?
 
-**PyKey** or "**Py**thon**Key**board" is a CircuitPython firmware based on the various examples contained in the [Adafruit learning guides](https://learn.adafruit.com/guides/popular) available in their [GitHub reporitory](https://github.com/adafruit/Adafruit_Learning_System_Guides).
+**PyKey** or "**Py**thon**Key**board" is a CircuitPython firmware based on the various examples contained in the [Adafruit learning guides](https://learn.adafruit.com/guides/popular) available in their [GitHub repository](https://github.com/adafruit/Adafruit_Learning_System_Guides).
 
 
 ## Why CircuitPython and not C/C++?
 Many Keyboard firmwares are available in C/C++.  Take for example TMK, QMK, BlueMicro_BLE, ZMK and many others.  They all implement a firmware that combine the low-level hardware scanning as well as the high-level keyboard functionality that users want.
 
-With PyKey, the aim is on keeping it simple and away from the hardware-specific details and focussed on the high level keyboard logic.  This therefore makes it portable from one platform to another with minimal code chhanges.
+With PyKey, the aim is on keeping it simple and away from the hardware-specific details and focussed on the high level keyboard logic.  This therefore makes it more DIY friendly and portable from one platform to another with minimal code chhanges.
 
-With CircuitPython 7.0.0, the most frequently called code in a keyboard firmware (the key scanning and debouncing routines) has been embedded within the core of CircuitPython (in the keypad module) and runs as compiled C++ code.  This reduces significantly the amount of Python code that continuously run waiting for keys to be pressed; thus improving performance.
+With CircuitPython 7.0.0, the most frequently called code in a keyboard firmware (the key scanning and debouncing routines) has been embedded within the core of CircuitPython (in the keypad module) and runs as compiled C++ code.  This reduces significantly the amount of Python code that continuously runs waiting for keys to be pressed; thus improving performance.  The rest of the keyboard logic, which only runs once keypresses are detected, has more time to run between key scans.
+
+CircuitPython also makes it very simple to customize the keymaps and the keyboard logic without any toolchain and without the need to recompile and flash your keyboard.  If you have a text editor and can edit a file saved in a mass storage device, you can make live changes to how your keyboard works.
 
 
 # Getting Started
@@ -26,10 +28,10 @@ With CircuitPython 7.0.0, the most frequently called code in a keyboard firmware
 
  Here are a few examples in pictures:
 
-| | | |
+
+| [![Pico](https://circuitpython.org/assets/images/boards/small/raspberry_pi_pico.jpg)](https://circuitpython.org/board/raspberry_pi_pico/)    | [![Feather840](https://circuitpython.org/assets/images/boards/small/feather_nrf52840_express.jpg) ](https://circuitpython.org/board/feather_nrf52840_express/)| [![ItsyBitsy M4](https://circuitpython.org/assets/images/boards/small/itsybitsy_m4_express.jpg)](https://circuitpython.org/board/itsybitsy_m4_express/) |
 | :---: | :---: |  :---: | 
-| [![Pico](https://circuitpython.org/assets/images/boards/small/raspberry_pi_pico.jpg)](https://circuitpython.org/board/raspberry_pi_pico/)    | [![Feather840](https://circuitpython.org/assets/images/boards/small/feather_nrf52840_express.jpg) ](https://circuitpython.org/board/feather_nrf52840_express/)| [![ItsyBitsy M4](https://circuitpython.org/assets/images/boards/small/itsybitsy_m4_express.jpg)](https://circuitpython.org/board/itsybitsy_m4_express/)
-| [![blueMicro840](https://circuitpython.org/assets/images/boards/small/bluemicro840.jpg)](https://circuitpython.org/board/bluemicro840/) | [![NiceNano](https://circuitpython.org/assets/images/boards/small/nice_nano.jpg) ](https://circuitpython.org/board/nice_nano/)                  |  [![Pro micro RP2040](https://circuitpython.org/assets/images/boards/small/sparkfun_pro_micro_rp2040.jpg)](https://circuitpython.org/board/sparkfun_pro_micro_rp2040/)
+| [![blueMicro840](https://circuitpython.org/assets/images/boards/small/bluemicro840.jpg)](https://circuitpython.org/board/bluemicro840/) | [![NiceNano](https://circuitpython.org/assets/images/boards/small/nice_nano.jpg) ](https://circuitpython.org/board/nice_nano/)                  |  [![Pro micro RP2040](https://circuitpython.org/assets/images/boards/small/sparkfun_pro_micro_rp2040.jpg)](https://circuitpython.org/board/sparkfun_pro_micro_rp2040/) |
 | [![macropad](https://circuitpython.org/assets/images/boards/small/adafruit_macropad_rp2040.jpg)](https://circuitpython.org/board/adafruit_macropad_rp2040/) | [![trellis](https://circuitpython.org/assets/images/boards/small/trellis_m4_express.jpg)](https://circuitpython.org/board/trellis_m4_express/) | [![keybow](https://circuitpython.org/assets/images/boards/small/pimoroni_keybow2040.jpg)](https://circuitpython.org/board/pimoroni_keybow2040/)
 
 
