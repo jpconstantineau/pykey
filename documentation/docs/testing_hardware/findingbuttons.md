@@ -7,6 +7,8 @@ sidebar_label: Finding Buttons
 The following program will list the button GPIO names when you press the buttons.
 This assumes that the buttons have one side grounded and the other connected to the controller.
 
+With this list you will have a starting point on how to configure the key scanning routines.
+
 ``` python
 import board
 import time

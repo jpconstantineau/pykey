@@ -7,6 +7,7 @@ module.exports = {
                  'testing_hardware/analog',
                  'testing_hardware/keymatrix',
                  'testing_hardware/findingbuttons',
+                 'testing_hardware/findingmatrix',
                  'testing_hardware/neopixels',
                  'testing_hardware/sound'],
    'Setup': ['setup/libraries']

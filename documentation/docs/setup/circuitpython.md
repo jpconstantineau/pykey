@@ -15,7 +15,7 @@ You need to download the version that's built for your board.  If your keyboard 
 
 ## Which version?
 
-PyKey needs core modules that were made available with version 7.0.0.  At the time of writing, 7.0.0 is still in alpha.
+PyKey needs core modules that were made available with version 7.0.0.  At the time of writing, 7.0.0 is still in beta.
 Why 7.0.0? [Hear the changes that comes wth 7.0 from Scott](https://youtu.be/HaLtpXjhSMg?t=2295), the main developer on Circuitpython.  The key addition needed by PyKey is the Keypad core module.  Earlier releases do not have this module.
 
 ## How do I install it?
