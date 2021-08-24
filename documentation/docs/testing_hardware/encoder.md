@@ -27,6 +27,8 @@ while True:
 
 If you want to see an example of how to read a rotary encoder, see this [video](https://youtu.be/4BNkuLonIVM?list=PLjF7R1fz_OOWFqZfqW9jlvQSIUmwn9lWr)
 
+## miniMacro5 - 5 Encoders Test
+
 CircuitPython seems to only support up to 4 rotary encoders.
 
 ``` python
