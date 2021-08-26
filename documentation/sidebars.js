@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    'Introduction': ['getting_started'],
+    'Introduction': ['getting_started','hardware'],
     'Features': ['features'],
     'Testing Hardware': ['testing_hardware/basic',
                  'testing_hardware/encoders',
