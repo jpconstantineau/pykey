@@ -38,6 +38,12 @@ Note that not all features and not all hardware form factors are shown.
 | 26 GPIOs     |                       |                      | Pi Pico           |                            | |  |
 | Finished Products |                   | NeoTrellis M4        | MacroPad RP2040, Keybow 2040   | M60 Mechanical Keyboard | |  |
 
+Comments:
+
+* STM boards do not have rotaryio implemented yet.
+* Due to limited RAM and flash size, CircuitPython builds for SAMD21 boards only include the bare minimum core modules.
+* Low clock speeds for nRF52840 allows for lower power usage and longer battery life for BLE applications.
+
                                         
 
 
