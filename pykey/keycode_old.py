@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2021 Pierre Constantineau
+# SPDX-License-Identifier: MIT
 """
 These keycodes are based on Universal Serial Bus HID Usage Tables Document 
 Version 1.12

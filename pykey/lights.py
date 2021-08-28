@@ -1,4 +1,6 @@
-#pylint: disable = line-too-long
+# SPDX-FileCopyrightText: 2021 Pierre Constantineau
+# SPDX-License-Identifier: MIT
+# pylint: disable = line-too-long
 from digitalio import DigitalInOut, Direction
 
 class LEDMatrix:
