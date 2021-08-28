@@ -23,6 +23,7 @@ Reference:
 | Framework |Zephyr | Adafruit_nRF52_Arduino | CircuitPython | 
 | connected to BLE | 700-750 uA | 950-1000 uA | 6.8-7.2 mA |
 | Sleeping | 50 uA | 60 uA | 160-200uA |
+| measured using | PPK | PPK | PPK2
 
 I tested the code below to see if time.sleep and alarm.light_sleep differred in power consumption and if one was better than the other.
 Unfortunately, both had the same power consumption with an average of 7mA.
@@ -30,8 +31,8 @@ Such a high current is similar to the issue filed on the Adafruit nRF52 arduino 
 
 ## Deep Sleep vs Sleeping Beauty (System OFF)
 The CircuitPython implementation of deep sleep isn't the same as what was implemented for the BlueMicro_BLE firmware.  The arduino implementation is quite simple:
-* setup the anode (+ve) side of the keyboard matrix to be outputs and put them `HIGH` or `LOW`. This will apply the necessary voltage to enable a trtigger when a key is pressed while sleeping 
-* setup GPIOs to be `INPUT_PULLUP_SENSE` or `INPUT_PULLDOWN_SENSE` depending on the case needed
+* setup the anode (+ve) side of the keyboard matrix to be outputs and put them `HIGH`. This will apply the necessary voltage to enable a trigger on the cathode side (-ve) when a key is pressed while sleeping 
+* setup GPIOs on the cathode side of the matrix to be `INPUT_PULLDOWN_SENSE` 
 * call `sd_power_system_off();` This is the softdevice call to completely power down the chip.
 
 At that point the chip powers down but when a key is pressed, it wakes up as if rebooting from a reset or a power up.  The `RESETREAS` register would have the E bit set (see datasheet, page 75) on powerup. The bootloader does not appear to clear-out the `RESETREAS` Regiter but does clear the `GPREGRET` register if appropriate. [See code here](https://github.com/adafruit/Adafruit_nRF52_Bootloader/blob/master/src/main.c#L182)
