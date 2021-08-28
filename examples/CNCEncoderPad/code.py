@@ -135,7 +135,7 @@ layer_index = 0
 last_position = 0
 not_sleeping = True
 ################################################################
-# DONE SETTING UP 
+# DONE SETTING UP
 ################################################################
 # End of Setup: Lets play some Music to let the user we are ready
 speaker.play_startup_tune()
@@ -147,7 +147,6 @@ while not_sleeping:
     key_event = keys.events.get()
     if key_event:
         key_number = key_event.key_number
-        
         # keep track of keys being pressed for layer determination
         if key_event.pressed:
             active_keys.append(key_number)
@@ -194,4 +193,3 @@ while not_sleeping:
     time.sleep(0.002)
 # if we end up here, the program will end with a short tune...
 speaker.play_shutdown_tune()
-

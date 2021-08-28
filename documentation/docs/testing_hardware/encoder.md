@@ -31,7 +31,7 @@ If you want to see an example of how to read a rotary encoder, see this [video](
 
 CircuitPython seems to only support up to 4 rotary encoders for the nRF52.
 Internally, it uses 2 GPIOTE channels to monitor the encoder and trigger updates when rotation is happening.  Since the nRF52840 has 8 GPIOTE channels, up to 4 rotary encoders are available.
-Other features may use GPIOTE channels and as such, the maximum number of rotary encoders which can be initialized may be less.
+Other features may use GPIOTE channels and as such, the maximum number of rotary encoders which can be initialized may be less.  If you want to see more information on how it's implemented, go see the updated files for this [Pull request](https://github.com/adafruit/circuitpython/pull/5253)
 
 ``` python
 import board

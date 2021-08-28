@@ -5,9 +5,8 @@ import neopixel
 import keypad
 import usb_hid
 from adafruit_hid.keyboard import Keyboard
-from keycode import PK_Keycode as KC
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
-
+from keycode import PK_Keycode as KC
 # Hardware definition: GPIO where RGB LED is connected.
 pixel_pin = board.P0_15
 num_pixels = 1
@@ -67,15 +66,15 @@ keys = keypad.KeyMatrix(
 
 
 # Neopixel update function
-def update_pixels(color):
+def update_pixels(thiscolor):
     for i in range(num_pixels):
-        pixels[i] = color
+        pixels[i] = thiscolor
     pixels.show()
 
-def get_active_layer(layer_keys_pressed, layer_count):
+def get_active_layer(layer_keys, layer_count):
     tmp = 0
-    if len(layer_keys_pressed)>0:
-        for layer_id in layer_keys_pressed:
+    if len(layer_keys)>0:
+        for layer_id in layer_keys:
             if layer_id > tmp: # use highest layer number
                 tmp = layer_id
     if tmp >= layer_count:
@@ -89,7 +88,7 @@ while True:
     key_event = keys.events.get()
     if key_event:
         key_number = key_event.key_number
-        
+
         # keep track of keys being pressed for layer determination
         if key_event.pressed:
             active_keys.append(key_number)
@@ -123,4 +122,3 @@ while True:
                         keyboard.release(item)
             update_pixels(0x000000)
     time.sleep(0.002)
-

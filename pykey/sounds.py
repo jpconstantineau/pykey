@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2021 Pierre Constantineau
 # SPDX-License-Identifier: MIT
-import pwmio
 import time
+import pwmio
 
 class Speaker:
 
@@ -12,7 +12,7 @@ class Speaker:
 
     def play_startup_tune(self):
         OFF = 0
-        ON = 2**15 
+        ON = 2**15
         self.buzzer.duty_cycle = ON
         self.buzzer.frequency = 440
         time.sleep(0.05)
@@ -24,7 +24,7 @@ class Speaker:
 
     def play_shutdown_tune(self):
         OFF = 0
-        ON = 2**15 
+        ON = 2**15
         self.buzzer.duty_cycle = ON
         self.buzzer.frequency = 1660
         time.sleep(0.05)
