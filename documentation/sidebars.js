@@ -9,7 +9,8 @@ module.exports = {
                  'testing_hardware/findingbuttons',
                  'testing_hardware/findingmatrix',
                  'testing_hardware/neopixels',
-                 'testing_hardware/sound'],
+                 'testing_hardware/sound',
+                 'testing_hardware/sleep'],
    'Setup': ['setup/libraries']
   },
 };
