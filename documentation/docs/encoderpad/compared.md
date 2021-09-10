@@ -7,15 +7,15 @@ sidebar_label: Compared
 <table>
     <thead>
         <tr>
-            <th colspan=2></th>
-            <th colspan=3>Basic</th>
-            <th colspan=3>Pro/Wireless</th>
+            <th colspan="2"></th>
+            <th colspan="3">Basic</th>
+            <th colspan="3">Pro/Wireless</th>
             <th>RP2040/RGB</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td colspan=2>Compatible Board</td>
+            <td colspan="2">Compatible Board</td>
             <td>Seeeduino XIAO</td>
             <td>Adafruit QT Py</td>
             <td>Adafruit QT Py RP2040</td>
@@ -25,7 +25,7 @@ sidebar_label: Compared
             <td>Included on PCB</td>
         </tr>
         <tr>
-            <td rowspan=4>Processor Details</td>
+            <td rowspan="4">Processor Details</td>
             <td>CPU</td>
             <td>SAMD21G18 32-bit Cortex M0+</td>
             <td>SAMD21G18 32-bit Cortex M0+</td>
@@ -66,7 +66,7 @@ sidebar_label: Compared
             <td>2 Cores</td>
         </tr>
         <tr>
-            <td rowspan=3>Compatible Firmware</td>
+            <td rowspan="3">Compatible Firmware</td>
             <td>Arduino </td>
             <td>✅</td>
             <td>✅</td>
@@ -97,28 +97,28 @@ sidebar_label: Compared
             <td></td>
         </tr>
         <tr>
-            <td rowspan=2 colspan=2>Input Features</td>
-            <td colspan=3>9 MX Switches</td>
-            <td colspan=3>9 MX Switches</td>
+            <td rowspan="2" colspan="2">Input Features</td>
+            <td colspan="3">9 MX Switches</td>
+            <td colspan="3">9 MX Switches</td>
             <td>9 Hot Swap MX Switches</td>
         </tr>
         <tr>
-            <td colspan=3>100 Step 60mm Rotary Encoder</td>
-            <td colspan=3>100 Step 60mm Rotary Encoder</td>
+            <td colspan="3">100 Step 60mm Rotary Encoder</td>
+            <td colspan="3">100 Step 60mm Rotary Encoder</td>
             <td>100 Step 60mm Rotary Encoder</td>
         </tr>
         <tr>
-            <td rowspan=2 colspan=2>Feedback Features</td>
-            <td rowspan=2 colspan=3> None </td>
-            <td colspan=3>9 White LEDs</td>
-            <td colspan=3>9 RGB LEDs</td>
+            <td rowspan="2" colspan="2">Feedback Features</td>
+            <td rowspan="2" colspan="3"> None </td>
+            <td colspan="3">9 White LEDs</td>
+            <td colspan="3">9 RGB LEDs</td>
         </tr>
         <tr>
-            <td colspan=3>Speaker</td>
+            <td colspan="3">Speaker</td>
             <td>Speaker</td>
         </tr>
         <tr>
-            <td rowspan=2>Assembly</td>
+            <td rowspan="2">Assembly</td>
             <td>No Soldering Needed?</td>
             <td>❌</td>
             <td>❌</td>
