@@ -11,6 +11,7 @@ module.exports = {
                  'testing_hardware/neopixels',
                  'testing_hardware/sound',
                  'testing_hardware/sleep'],
-   'Setup': ['setup/libraries']
+   'Setup': ['setup/libraries'],
+   'EncoderPad': ['encoderpad/compared']
   },
 };
