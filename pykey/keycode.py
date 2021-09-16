@@ -19,29 +19,24 @@ class PK_Keycode(Keycode):
     POST_FAIL = 0x02
     UNDEFINED = 0x03
 
-    ENTER = 0x28
     ENT  = 0x28
-
     ESC = 0x29
     BSPACE = 0x2A
-    BSPACE = 0x2A
     BSPC = 0x2A
-
-    TAB = 0x2B
     SPACE = 0x2C
-    MINUS = 0x2D
+    MINS = 0x2D
+
     EQUAL = 0x2E
     LBRACKET = 0x2F
     RBRACKET = 0x30
     BSLASH = 0x31
     NONUS_HASH = 0x32
     SCOLON = 0x33
-    QUOTE = 0x34
+    QUOT = 0x34
     GRAVE = 0x35
-    COMMA = 0x36
+    COMM = 0x36
     DOT = 0x37
     SLASH = 0x38
-
     CAPSLOCK = 0x39
     CAPS = 0x39
     CLCK = 0x39
@@ -51,12 +46,9 @@ class PK_Keycode(Keycode):
     INS  = 0x49
     PSCREEN = 0x46
     SCROLLLOCK = 0x47
-    PAUSE = 0x48
-    INSERT = 0x49
-    HOME = 0x4A
+    PAUS = 0x48
+    BRK  = 0x48
     PGUP = 0x4B
-    DELETE = 0x4C
-    END = 0x4D
     PGDOWN = 0x4E
     RIGHT = 0x4F
     LEFT = 0x50
@@ -80,16 +72,8 @@ class PK_Keycode(Keycode):
     KP_0 = 0x62
     KP_DOT = 0x63
     NONUS_BSLASH = 0x64
-    APPLICATION = 0x65
-    POWER = 0x66
+    APP  = 0x65
     KP_EQUAL = 0x67
-    F13 = 0x68
-    F14 = 0x69
-    F15 = 0x6A
-    F16 = 0x6B
-    F17 = 0x6C
-    F18 = 0x6D
-    F19 = 0x6E
     F20 = 0x6F
     F21 = 0x70
     F22 = 0x71
@@ -146,7 +130,7 @@ class PK_Keycode(Keycode):
     EXSEL = 0xA4
 
     # LAST OF THE VALID KEYCODES ANYTHING BELOW SHOULD BE FILTERED OUT
-    RESERVED_A5 = 0xA5  # Used as macro identifier
+    RESERVED_A5 = 0xA5  
     RESERVED_A6 = 0xA6
     RESERVED_A7 = 0xA7
     RESERVED_A8 = 0xA8
@@ -157,7 +141,6 @@ class PK_Keycode(Keycode):
     RESERVED_AD = 0xAD
     RESERVED_AE = 0xAE
     RESERVED_AF = 0xAF
-
 
     LAYER_0  =    0xF0
     LAYER_1  =    0xF1
@@ -191,26 +174,22 @@ class PK_Keycode(Keycode):
     RCMD        = 0xE7
     RWIN        = 0xE7
 
-
     RGHT = RIGHT
     PGDN = PGDOWN
     PSCR = PSCREEN
     SLCK = SCROLLLOCK
-    PAUS = PAUSE
-    BRK  = PAUSE
+
     NLCK = NUMLOCK
     SPC  = SPACE
-    MINS = MINUS
     EQL  = EQUAL
     GRV  = GRAVE
     RBRC = RBRACKET
     LBRC = LBRACKET
-    COMM = COMMA
+    
     BSLS = BSLASH
     SLSH = SLASH
     SCLN = SCOLON
-    QUOT = QUOTE
-    APP  = APPLICATION
+
     NUHS = NONUS_HASH
     NUBS = NONUS_BSLASH
     LCAP = LOCKING_CAPS
@@ -253,139 +232,3 @@ class PK_Keycode(Keycode):
     SLCT = SELECT
     AGIN = AGAIN
     PSTE = PASTE
-
-
-    BIT_LCTRL = (1)
-    BIT_LSHIFT = (2)
-    BIT_LALT = (4)
-    BIT_LGUI = (8)
-    BIT_RCTRL = (16)
-    BIT_RSHIFT = (32)
-    BIT_RALT = (64)
-    BIT_RGUI = (128)
-
-    MOD_LCTRL = (BIT_LCTRL << 8)
-    MOD_LSHIFT = (BIT_LSHIFT << 8)
-    MOD_LALT = (BIT_LALT << 8)
-    MOD_LGUI = (BIT_LGUI << 8)
-    MOD_RCTRL = (BIT_RCTRL << 8)
-    MOD_RSHIFT = (BIT_RSHIFT << 8)
-    MOD_RALT = (BIT_RALT << 8)
-    MOD_RGUI = (BIT_RGUI << 8)
-
-    def MOD(M, KC):
-        return ( KC |  M )
-
-    def LALT(KEY):
-        return  ( KEY | ((4) << 8) )
-
-    def RALT(KEY):
-        return  ( KEY | ((64)<< 8) )
-
-    def LCTL(KEY):
-        return  ( KEY | ((1)<< 8) )
-
-    def RCTL(KEY):
-        return  ( KEY | ((16) << 8) )
-
-    def RSFT(KEY):
-        return  ( KEY | ((32) << 8) )
-
-    def LSFT(KEY):
-        return  ( KEY | ((2) << 8) )
-
-    def LGUI(KEY):
-        return  ( KEY | ((8) << 8) )
-
-    def RGUI(KEY):
-        return  ( KEY | ((128) << 8) )
-
-    # def S(KEY):
-    #return  ( KEY | ((2) << 8) )
-
-
-
-    TILD = MOD(MOD_LSHIFT, 0x35)
-    LT =   MOD(MOD_LSHIFT, 0x36)
-    GT =   MOD(MOD_LSHIFT, 0x37)
-    EXLM = MOD(MOD_LSHIFT, 0x1E)
-    AT   = MOD(MOD_LSHIFT, 0x1F)
-    HASH = MOD(MOD_LSHIFT, 0x20)
-    DLR  = MOD(MOD_LSHIFT, 0x21)
-    PERC = MOD(MOD_LSHIFT, 0x22)
-    CIRC = MOD(MOD_LSHIFT, 0x23)
-    AMPR = MOD(MOD_LSHIFT, 0x24)
-    ASTR = MOD(MOD_LSHIFT, 0x25)
-    LPRN = MOD(MOD_LSHIFT, 0x26)
-    RPRN = MOD(MOD_LSHIFT, 0x27)
-    UNDS = MOD(MOD_LSHIFT, 0x2D)
-    PLUS = MOD(MOD_LSHIFT, 0x2E)
-
-    LCBR = MOD(MOD_LSHIFT, 0x2F)
-    RCBR = MOD(MOD_LSHIFT, 0x30)
-    PIPE = MOD(MOD_LSHIFT, 0x31)
-
-    COLN = MOD(MOD_LSHIFT, 0x33)
-    DQUO = MOD(MOD_LSHIFT, 0x34)
-    DQT = DQUO
-
-    LT   = MOD(MOD_LSHIFT, 0x36)
-    GT   = MOD(MOD_LSHIFT, 0x37)
-    QUES = MOD(MOD_LSHIFT, 0x38)
-
-    NUTL = MOD(MOD_LSHIFT,NUHS)
-    NUPI = MOD(MOD_LSHIFT,NUBS)
-
-
-    LABK = LT
-    RABK = GT
-
-    def MC(KC):
-        return (( KC << 8 ) | 0xA5 )            # move KC to upper 8 bits and use RESERVED_A5 keycode for marking this as a macro.
-
-    def KB(KC):
-        return (( KC << 8 ) | 0xA6 )             # move KC to upper 8 bits and use RESERVED_A6 keycode for marking this as a special keyboard function.
-
-    def MK(KC):
-        return (( KC << 8 ) | 0xA7 )             # move KC to upper 8 bits and use RESERVED_A7 keycode for marking this as a media key.
-
-    def MS(KC):
-        return (( KC << 8 ) | 0xA9 )           # move KC to upper 8 bits and use RESERVED_A9 keycode for marking this as a mouse key.
-
-    # Mousekey
-    """
-    MS_OFF  =   MS(A)
-    MS_UP   =   MS(B)
-    MS_DOWN =   MS(C)
-    MS_LEFT =   MS(D)
-    MS_RIGHT =  MS(E)
-    MS_BTN1  =  MS(F)
-    MS_BTN2  =  MS(G)
-    MS_BTN3  =  MS(H)
-    MS_BTN4  =  MS(I)
-    MS_BTN5  =  MS(J)
-    MS_WH_UP   = MS(K)
-    MS_WH_DOWN = MS(L)
-    MS_WH_DN   = MS_WH_DOWN
-    MS_WH_LEFT =   MS(M)
-    MS_WH_RIGHT =  MS(N)
-    MS_ACCEL0 =  MS(O)
-    MS_ACCEL1 =  MS(P)
-    MS_ACCEL2 =  MS(Q)
-    MS_U = MS_UP
-    MS_D = MS_DOWN
-    MS_L = MS_LEFT
-    MS_R = MS_RIGHT
-    BTN1 = MS_BTN1
-    BTN2 = MS_BTN2
-    BTN3 = MS_BTN3
-    BTN4 = MS_BTN4
-    BTN5 = MS_BTN5
-    WH_U = MS_WH_UP
-    WH_D = MS_WH_DOWN
-    WH_L = MS_WH_LEFT
-    WH_R = MS_WH_RIGHT
-    ACL0 = MS_ACCEL0
-    ACL1 = MS_ACCEL1
-    ACL2 = MS_ACCEL2
-    """
