@@ -1,9 +1,10 @@
+import time
+import pwmio
 
-class PK_Speaker:
+class KB_Speaker:
 
     def __init__(self, speaker_pin):
-        import time
-        import pwmio
+
         self.speaker_pin = speaker_pin
         self.buzzer = pwmio.PWMOut(speaker_pin, variable_frequency=True)
         self.buzzer.frequency = 440

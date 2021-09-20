@@ -131,3 +131,6 @@ dmypy.json
 
 # vscode settings
 .vscode/
+
+# compiled micropython/circuitpython libraries
+*.mpy

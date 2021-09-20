@@ -1,12 +1,11 @@
+from digitalio import DigitalInOut, Direction
 
 
-
-class PK_LEDMatrix:
+class KB_LEDMatrix:
 # LEDMatrix(row_pins: Sequence[microcontroller.Pin], column_pins: Sequence[microcontroller.Pin], columns_to_anodes: bool = True)
 
 
     def __init__(self, row_pins, column_pins, columns_to_anodes: bool = True):
-        from digitalio import DigitalInOut, Direction
         self.row_pins = row_pins
         self.column_pins = column_pins
         self.columns_to_anodes = columns_to_anodes

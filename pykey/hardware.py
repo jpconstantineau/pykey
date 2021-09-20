@@ -28,13 +28,14 @@ Implementation Notes
 import os
 import usb_hid
 from adafruit_hid.keyboard import Keyboard
+from pykey.BitmapKeyboard import BitmapKeyboard
 
-class PK_Hardware:
+class KB_Hardware:
     """
     Class representing a keyboard Hardware without the specifics...
     """
 
-    def __init__(self):
+    def __init__(self, nkro: bool = False):
 
 
         self._board_type = os.uname().machine
@@ -42,6 +43,7 @@ class PK_Hardware:
         self._pixels = None
         self._leds = None
         self._speaker =  None
+        self._nkro = nkro
 
 
     @property
@@ -129,6 +131,9 @@ class PK_Hardware:
                     macropad.keyboard.send(macropad.Keycode.A)
         """
         if self._keyboard is None:
-            self._keyboard = Keyboard(usb_hid.devices)
+            if self._nkro is True:
+                self._keyboard = BitmapKeyboard(usb_hid.devices)
+            else:
+                self._keyboard = Keyboard(usb_hid.devices)
         return self._keyboard
 

@@ -1,30 +1,52 @@
+#pylint: disable = line-too-long
 import os
 import time
-from pykey.encoderpad import EncoderPad
+import rainbowio
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 
+from pykey.pykey60 import PyKey60
 
-macropad = EncoderPad()
+hardwaredef = PyKey60(nkro=False)
+
+pixels = hardwaredef.pixels
+
+cyclecount = 0
+
+def rainbow_cycle(wait):
+        num_pixels = 61
+        for i in range(num_pixels):
+            rc_index = (i * 256 // num_pixels) + wait
+            pixels[i] = rainbowio.colorwheel(rc_index & 255)
+        pixels.show()
 
 
-################################################################
-# Peprare to load keymaps...
-# No need to replace things
-################################################################
+buzzer = hardwaredef.speaker
+OFF = 0
+ON = 2**15
+
+# Hardware definition: Switch Matrix Setup.
+keys = hardwaredef.keys
+
 # CONFIGURABLES ------------------------
 
 MACRO_FOLDER = '/layers'
 
-
 # CLASSES AND FUNCTIONS ----------------
+
 class Layer:
     """ Class representing a layer, for which we have a set
         of macro sequences or keycodes"""
     def __init__(self, layerdata):
         self.name = layerdata['name']
         self.macros = layerdata['macros']
-        self.encoder = layerdata['encoder']
 
+
+# Neopixel update function
+def update_pixels(color):
+    num_pixels = 61
+    for i in range(num_pixels):
+        pixels[i] = color
+    pixels.show()
 
 
 # INITIALIZATION -----------------------
@@ -63,32 +85,24 @@ def get_active_layer(layer_keys_pressed, layer_count):
         tmp = layer_count-1
     return tmp
 
-
-################################################################
-# Initialize common variables
-# No need to replace things
-################################################################
-
-keyboard_layout = KeyboardLayoutUS(macropad.keyboard)
+# setup variables
+keyboard = hardwaredef.keyboard
+keyboard_layout = KeyboardLayoutUS(keyboard)
 active_keys = []
-layer_index = 0
-last_position = 0
 not_sleeping = True
-################################################################
-# DONE SETTING UP
-################################################################
-# End of Setup: Lets play some Music to let the user we are ready
-if macropad.speaker is not None:
-    macropad.speaker.play_startup_tune()
+layer_index = 0
 
+if hardwaredef.speaker is not None:
+    hardwaredef.speaker.play_startup_tune()
 
-################################################################
-# loop-y-loop
-################################################################
 while not_sleeping:
-    key_event = macropad.keys.events.get()
+    key_event = keys.events.get()
+
     if key_event:
         key_number = key_event.key_number
+        cyclecount = cyclecount +1
+        rainbow_cycle(cyclecount)
+
         # keep track of keys being pressed for layer determination
         if key_event.pressed:
             active_keys.append(key_number)
@@ -108,31 +122,17 @@ while not_sleeping:
         # print(layers[layer_index].macros[key_number][1])
         group = layers[layer_index].macros[key_number][2]
         color = layers[layer_index].macros[key_number][0]
+
         if key_event.pressed:
+            update_pixels(color)
             for item in group:
                 if isinstance(item, int):
-                    macropad.keyboard.press(item)
+                    keyboard.press(item)
                 else:
-                    macropad.keyboard_layout.write(item)
+                    keyboard_layout.write(item)
         else:
             for item in group:
                 if isinstance(item, int):
                     if item >= 0:
-                        macropad.keyboard.release(item)
-
-    position = macropad.encoder
-    if position != last_position:
-        diff=position-last_position
-        if diff>0:
-            group = layers[layer_index].encoder[0][2]
-
-        else:
-            group = layers[layer_index].encoder[1][2]
-        for item in group:
-            if isinstance(item, int):
-                macropad.keyboard.send(item)
-    last_position = position
+                        keyboard.release(item)
     time.sleep(0.002)
-# if we end up here, the program will end with a short tune...
-if macropad.speaker is not None:
-    macropad.speaker.play_shutdown_tune()

@@ -9,7 +9,7 @@ Chapter 10: Keyboard/Keypad Page(0x07) - Page 53
 https://www.usb.org/sites/default/files/documents/hut1_12v2.pdf
 """
 
-class PK_Keycode(Keycode):
+class KB_Keycode(Keycode):
     NO        = 0x00
     XXXXXXX   = 0x00
     ROLL_OVER = 0x01
