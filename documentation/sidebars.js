@@ -2,6 +2,11 @@ module.exports = {
   someSidebar: {
     'Introduction': ['getting_started','hardware'],
     'Features': ['features'],
+    'Hardware': ['hardware/4x4macropad',
+                 'hardware/5x5macropad',
+                 'hardware/gridmx47',
+                 'hardware/offsetmx43',
+                 'hardware/pykey60'],
     'Testing Hardware': ['testing_hardware/basic',
                  'testing_hardware/encoders',
                  'testing_hardware/analog',
