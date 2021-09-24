@@ -109,12 +109,16 @@ while not_sleeping:
         group = layers[layer_index].macros[key_number][2]
         color = layers[layer_index].macros[key_number][0]
         if key_event.pressed:
+            macropad.pixels[key_number] = 0xFFFFFF
+            macropad.pixels.show()
             for item in group:
                 if isinstance(item, int):
                     macropad.keyboard.press(item)
                 else:
                     macropad.keyboard_layout.write(item)
         else:
+            macropad.pixels[key_number] = color
+            macropad.pixels.show()
             for item in group:
                 if isinstance(item, int):
                     if item >= 0:

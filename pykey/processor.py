@@ -1,4 +1,5 @@
 import time
+import rainbowio
 
 class KB_Processor:
     """
@@ -12,12 +13,19 @@ class KB_Processor:
         self._keymaps = keymaps
         self._layer_count = len(self._keymaps)
         self._layout = layout(self._keyboard)
+        self._pixels = self._hardware.pixels
 
         if not keymaps:
             print('NO KEYMAP FILES FOUND')
             while True:
                 pass
 
+    def rainbow_cycle(self, number):
+
+        for i in range(61):
+            rc_index = (i * 256 // 61) +number
+            self._pixels[i] = rainbowio.colorwheel(rc_index & 255)
+        self._pixels.show()
 
     def get_active_layer(self, layer_keys_pressed, layer_count):
         tmp = 0
@@ -36,6 +44,7 @@ class KB_Processor:
         active_keys = []
         not_sleeping = True
         layer_index = 0
+        i = 0
         while not_sleeping:
             key_event = self._keys.events.get()
             if key_event:
@@ -73,4 +82,7 @@ class KB_Processor:
                             if item >= 0:
                                 self._hardware.keyboard.release(item)
                   #  update_pixels(0x000000)
+            else:
+                i = i+1
+                self.rainbow_cycle(i)
             time.sleep(0.002)
