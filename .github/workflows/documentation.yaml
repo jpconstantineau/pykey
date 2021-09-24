@@ -42,6 +42,7 @@ jobs:
           USE_SSH: true
           GIT_USER: git
         run: |
+          cd documentation
           git config --global user.email "jpconstantineau@gmail.com"
           git config --global user.name "Pierre Constantineau"
           if [ -e yarn.lock ]; then
