@@ -23,7 +23,7 @@ CircuitPython also makes it very simple to customize the keymaps and the keyboar
 # Getting Started
 ## Get some supported hardware. 
 
- Lots of hardware supports CircuitPython. Currently, 226 boards support it.  Not all are destined to be keyboards. 
+ Lots of hardware supports CircuitPython. Currently, 237 boards support it.  Not all are destined to be keyboards. 
  Keyboards that support one of the breakout boards listed in the [CircuitPython Downloads](https://circuitpython.org/downloads) is a good start.  There are even macropads in the list.
 
  Here are a few examples in pictures:
@@ -37,12 +37,15 @@ CircuitPython also makes it very simple to customize the keymaps and the keyboar
 
 ## Install CircuitPython on it
 
-Go [here](https://circuitpython.org/downloads) and download the latest CircuitPython for your hardware.  PyKey uses features included in CircuitPython 7.0.0.  You can download the Absolute Newest (automated builds) or the latest 7.0.0 alpha (release). Don't download a 6.x release as some of the necessary modules have only been included since 7.0.0.
+Go [here](https://circuitpython.org/downloads) and download the latest CircuitPython for your hardware.  PyKey uses features included in CircuitPython 7.0.0.  You can download the Absolute Newest (automated builds) or the latest 7.0.0 release. Don't download a 6.x release as some of the necessary modules have only been included since 7.0.0.
 
 ## Download and Install the CircuitPython Libraries
 
 You will need to download the libraries from [here](https://circuitpython.org/libraries).
-Since there are hundreds of different libraries included in the package, they generally won't fit if you copy them all to your board. As such, you only need to copy the ones that are needed.
+Since there are hundreds of different libraries included in the package, they generally won't fit if you copy them all to your board. As such, you only need to copy the ones that are needed. Typically this is the following:
+
+* adafruit_hid (folder)
+* neopixel.mpy (file)
 
 ## Read the basics of CircuitPython
 
@@ -52,7 +55,7 @@ Adafruit has created great documentation on how to start with CircuitPython:
 * [Essentials](https://learn.adafruit.com/circuitpython-essentials)
 * [Pins and Modules](https://learn.adafruit.com/circuitpython-essentials/circuitpython-pins-and-modules) 
 
-# Possible Hardware
+# Possible Hardware Components
 
 ## Input Devices
 
@@ -60,7 +63,7 @@ A number of input devices and methods can be used with CircuitPython:
 * Buttons: Single keys connected between GPIO and GND
 * Key Matrix: Matrix of keys with diodes. Columns and rows are connected to GPIOs: [5x6](https://learn.adafruit.com/adafruit-neokey-5x6-ortho-snap-apart/circuitpython) [keypad](https://learn.adafruit.com/key-pad-matrix-scanning-in-circuitpython)
 * Rotary Encoders: A and B connected to GPIOs.
-* Potentiometers: An Analog value...
+* Potentiometers: Read an Analog value/position...
 * Nunchuck and other digital input devices
 * Battery Level: Analog read of battery voltage.
 * USB Connection: is it connected to computer through USB?
@@ -72,7 +75,7 @@ Similarly to input devicecs, CircuitPython supports a vast array of feedback met
 * LED: Single LED connected to GPIO
 * PWM LED: A number of LEDs connected to a Mosfet for PWM intensity control.
 * LED Matrix: matrix of LEDs, Columns and Rows are connected to GPIOs
-* RGB LEDs: addressable LEDs.
+* RGB LEDs: addressable LEDs.  Also known as Neopixels.
 * Speaker: Single speaker connected to a GPIO
 * Displays: Too many types to count...
 * Serial port: useful for debugging...
@@ -82,7 +85,7 @@ Human Interface Devices define multiple interfaces for interacting with computer
 
 * Keyboard - standard keycodes
 * Keyboard - consumer
-* Mouse
+* Mouse 
 * Gamepad
 
 ## HID Connections

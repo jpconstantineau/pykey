@@ -27,6 +27,7 @@ List of implemented features
 | One Shot Keys                                                                                                          |     🚧     |   | |
 | Combo Keys                                                                                                             |     🚧     |   | |
 | Macros                                                                                                                 |     ✅     |   | |
+| DuckyScipt Macros                                                                                                      |     🚧     |   | |
 | **Keyboard and Controller Board Hardware Options**                                                                     |            |     | |
 | Ghosted Keys Support                                                                                                   |     🚧     |   | |
 | Split Keyboard Support                                                                                                 |     🚧     |  ❌ | ✅  |

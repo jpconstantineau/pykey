@@ -2,7 +2,7 @@ module.exports = {
   someSidebar: {
     'Introduction': ['getting_started','hardware'],
     'Features': ['features'],
-    'Hardware': ['hardware/4x4macropad',
+    'Keyboards/Macropads': ['hardware/4x4macropad',
                  'hardware/5x5macropad',
                  'hardware/gridmx47',
                  'hardware/offsetmx43',

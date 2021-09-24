@@ -1,7 +1,7 @@
 ---
 id: hardware
-title: Choosing Hardware
-sidebar_label: Choosing Hardware
+title: Choosing Hardware Platform
+sidebar_label: Choosing Hardware Platform
 ---
 
 Here is a comparative table to help choose the processor and base hardware to build your keyboard.
@@ -36,7 +36,7 @@ Note that not all features and not all hardware form factors are shown.
 | 21 GPIOs     | Feather M0 Express    | Feather M4 Express   | Feather RP2040    | Feather nRF52840 Express   | Feather STM32F405 Express |  |
 | 21-23 GPIOs  | ItsyBitsy M0 Express  | ItsyBitsy M4 Express | ItsyBitsy RP2040  | ItsyBitsy nRF52840 Express | |  |
 | 26 GPIOs     |                       |                      | Pi Pico           |                            | |  |
-| Finished Products |                   | NeoTrellis M4        | MacroPad RP2040, Keybow 2040   | M60 Mechanical Keyboard | |  |
+| Finished Products |                   | NeoTrellis M4        | MacroPad RP2040, Keybow 2040, PyKey60, EncoderPad RP2040   | M60 Mechanical Keyboard| |  |
 
 Comments:
 
