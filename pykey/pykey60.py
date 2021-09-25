@@ -56,13 +56,14 @@ class PyKey60(KB_Hardware):
 
         self._speaker = KB_Speaker(board.SPEAKER)
 
-        # empty keys: 40,53,54  The following should like a columns x row matrix with numbers indicating pixel ID per key 
+        # The following should like a columns x row matrix with numbers indicating pixel ID per key 
         self._key_to_position = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,
                                  14,15,16,17,18,19,20,21,22,23,24,25,26,27,
                                  28,29,30,31,32,33,34,35,36,37,38,39,-1,40, 
                                  41,42,43,44,45,46,47,48,49,50,51,-1,-1,52,
                                  53,54,55,-1,-1,56,-1,-1,-1,57,58,59,-1,60)
         # the following is to revert back from pixel to key. useful for testing.
+        # empty keys: 40,53,54,59,60,62,63,64,68  
         self._position_to_key = (0, 1,2,3,4,5,6,7,8,9,10,11,12,13,
                                  14,15,16,17,18,19,20,21,22,23,24,25,26,27,
                                  28,29,30,31,32,33,34,35,36,37,38,39,41,
