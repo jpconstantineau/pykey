@@ -32,3 +32,16 @@ class KB_Speaker:
         self.buzzer.frequency = 440
         time.sleep(0.15)
         self.buzzer.duty_cycle = OFF
+
+    def start_tone(self, frequency):
+        OFF = 0
+        ON = 2**15
+        self.buzzer.frequency = frequency
+        self.buzzer.duty_cycle = ON
+
+    def stop_tone(self):
+        OFF = 0
+        ON = 2**15
+        self.buzzer.duty_cycle = OFF
+    
+

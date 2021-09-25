@@ -44,7 +44,16 @@ class KB_Hardware:
         self._leds = None
         self._speaker =  None
         self._nkro = nkro
+        self._key_to_position = None
+        self._position_to_key = None
 
+    @property
+    def key_to_position(self):
+        return self._key_to_position
+
+    @property
+    def position_to_key(self):
+        return self._position_to_key
 
     @property
     def keys(self):
