@@ -21,11 +21,11 @@ class KB_Processor:
                 pass
 
     def rainbow_cycle(self, number):
-
-        for i in range(61):
-            rc_index = (i * 256 // 61) +number
-            self._pixels[i] = rainbowio.colorwheel(rc_index & 255)
-        self._pixels.show()
+        if self._pixels is not None:
+            for i in range(61):
+                rc_index = (i * 256 // 61) +number
+                self._pixels[i] = rainbowio.colorwheel(rc_index & 255)
+            self._pixels.show()
 
     def get_active_layer(self, layer_keys_pressed, layer_count):
         tmp = 0

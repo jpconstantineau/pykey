@@ -1,7 +1,7 @@
 ---
 id: offsetmx43
 title: Raspberry Pi Pico 43-keys Keyboard
-sidebar_label: 4x12 keyboard
+sidebar_label: 4x12 Staggered Keyboard
 ---
 
 Coming Soon!

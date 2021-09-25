@@ -1,7 +1,7 @@
 ---
 id: gridmx47
 title: Raspberry Pi Pico 47-keys Ortholinear Keyboard
-sidebar_label: 4x12 Ortho keyboard
+sidebar_label: 4x12 Ortholinear keyboard
 ---
 
 Coming Soon!
