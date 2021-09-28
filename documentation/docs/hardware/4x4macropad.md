@@ -7,7 +7,7 @@ sidebar_label: 4x4 Macropad V1
 
 [![Raspberry Pi Pico 4x4 Macropad](https://cdn.tindiemedia.com/images/resize/Pubqf0yIn05dkHKhwmGQ0Qd6Ov4=/p/fit-in/653x435/filters:fill(fff)/i/556481/products/2021-09-14T00%3A50%3A10.547Z-PXL_20210914_004745226.jpg?1631555465)](https://www.tindie.com/products/jpconstantineau/raspberry-pi-pico-4x4-macropad/)
 
-As seen on the [Tindie Blog!](https://blog.tindie.com/2021/09/raspberry-pi-pico-macropad/)
+As seen on the [Tindie Blog!](https://blog.tindie.com/2021/09/raspberry-pi-pico-macropad/) as well as on the [Adafruit Blog](https://blog.adafruit.com/2021/09/22/a-raspberry-pi-macropad-for-quick-fire-keymaps-circuitpython-raspberrypi-raspberrypipico/)
 
 Buy it on [Tindie](https://www.tindie.com/products/jpconstantineau/raspberry-pi-pico-4x4-macropad/)
 

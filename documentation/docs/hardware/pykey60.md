@@ -4,6 +4,11 @@ title: PyKey60 - RGB Keyboard PCB with a RP2040
 sidebar_label: 60% Keyboard
 ---
 
+
+As Seen on
+[![Hackster.io](https://prod.hackster-cdn.online/assets/hackster_avnet_logo_blue-1b4e4fdb9ca5ceb1b0fff22a40150643485564c86e07fe4fc0dc562335b5fcdf.png)](https://www.hackster.io/news/bluemicro-s-pykey60-is-a-60-mechanical-keyboard-powered-by-an-rp2040-and-circuitpython-3d27434a6e92)
+
+
 [![PyKey60](https://cdn.tindiemedia.com/images/resize/_pGlkaakG7Cx8w1APtDskXm0MQE=/p/fit-in/653x435/filters:fill(fff)/i/556481/products/2021-09-17T19%3A53%3A16.118Z-PXL_20210917_194732303.jpg?1631883222)](https://www.tindie.com/products/jpconstantineau/pykey60-rgb-keyboard-pcb-with-a-rp2040/)
 
 Buy it on [Tindie](https://www.tindie.com/products/jpconstantineau/pykey60-rgb-keyboard-pcb-with-a-rp2040/)
