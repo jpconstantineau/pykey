@@ -6,7 +6,7 @@ import neopixel
 import keypad
 import usb_hid
 from adafruit_hid.keyboard import Keyboard
-from pykey.keycode import PK_Keycode as KC
+from pykey.keycode import KB_Keycode as KC  #Note:  In order for this import to work you will need the file pykey/keycode.py in a folder called pykey on your board
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 
 # Hardware definition: GPIO where RGB LED is connected.
