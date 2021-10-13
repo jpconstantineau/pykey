@@ -96,3 +96,11 @@ CircuitPython supports both USB and Bluetooth.
 * [BLE HID](https://learn.adafruit.com/ble-hid-keyboard-buttons-with-circuitpython)
 
 
+## Example Code
+
+You can find different examples of code to put in your code.py file in the pykey/examples folder.
+
+If using the examples you may need to add two folders to your board:
+* layers (with whatever layer.py file you wish to choose)
+* pykey (with the contents of the pykey/pykey file in this GitHub
+
