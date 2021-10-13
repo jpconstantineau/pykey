@@ -10,17 +10,17 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 
 ## TLDR; Downloads!
 
-| Keyboard | CircuitPython Download | Firmware Download |
+| Keyboard | CircuitPython UF2 Download | Firmware Download |
 | --- | --- | --- |
-| PyKey60 | [PyKey60 - UF2 Download](https://circuitpython.org/board/jpconstantineau_pykey60/) | |
-| 4x4 Macropad | [Pico - UF2 Download](https://circuitpython.org/board/raspberry_pi_pico/) | |
-| 5x5 Macropad | [Pico - UF2 Download](https://circuitpython.org/board/raspberry_pi_pico/) | |
-| OffsetMX43 | [Pico - UF2 Download](https://circuitpython.org/board/raspberry_pi_pico/) | |
-| GridMX47  | [Pico - UF2 Download](https://circuitpython.org/board/raspberry_pi_pico/) | |
-| VColMX44 | [Pico - UF2 Download](https://circuitpython.org/board/raspberry_pi_pico/) | |
-| VColChoc44  | [PyKey60 - UF2 Download](https://circuitpython.org/board/jpconstantineau_pykey60/)  | |
-| EncoderPad RP2040 | [EncoderPad RP2040 - UF2 Download](https://circuitpython.org/board/raspberry_pi_pico/) | |
-| EncoderPad Basic | [Seeeduino XIAO - Keyboard Optimized - UF2 Download](https://circuitpython.org/board/seeeduino_xiao_kb/) | |
+| PyKey60 | [PyKey60](https://circuitpython.org/board/jpconstantineau_pykey60/) | |
+| 4x4 Macropad | [Pico](https://circuitpython.org/board/raspberry_pi_pico/) | |
+| 5x5 Macropad | [Pico](https://circuitpython.org/board/raspberry_pi_pico/) | |
+| OffsetMX43 | [Pico](https://circuitpython.org/board/raspberry_pi_pico/) | |
+| GridMX47  | [Pico](https://circuitpython.org/board/raspberry_pi_pico/) | |
+| VColMX44 | [Pico](https://circuitpython.org/board/raspberry_pi_pico/) | |
+| VColChoc44  | [PyKey60](https://circuitpython.org/board/jpconstantineau_pykey60/)  | |
+| EncoderPad RP2040 | [EncoderPad RP2040](https://circuitpython.org/board/raspberry_pi_pico/) | |
+| EncoderPad Basic | [Seeeduino XIAO - Keyboard Optimized](https://circuitpython.org/board/seeeduino_xiao_kb/) | |
 | EncoderPad Wireless | [BlueMicro840 - UF2 Download](https://circuitpython.org/board/seeeduino_xiao_kb/) | |
 
 
