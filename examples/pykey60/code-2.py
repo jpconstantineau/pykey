@@ -47,6 +47,6 @@ for filename in files:
             pass
 
 
-processor = PK_Processor(PyKey60(nkro=False), layers)
+processor = KB_Processor(PyKey60(nkro=False), layers)
 
 processor.go()
