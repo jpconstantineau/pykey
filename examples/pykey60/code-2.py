@@ -1,8 +1,8 @@
 #pylint: disable = line-too-long
 import os
 
-from pykey.pykey60 import PyKey60
-from pykey.processor import PK_Processor
+from pykey.pykey60 import PyKey60        # You will need the file pykey/pykey60.py in order to use this import.  It must be placed in a folder called pykey on your board.
+from pykey.processor import KB_Processor  # You will need the file pykey/processor.py in order to use this import  It must be placed in a folder called pykey on your board.
 
 # CONFIGURABLES ------------------------
 
