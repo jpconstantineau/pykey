@@ -4,7 +4,7 @@ import time
 import rainbowio
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 
-from pykey.pykey60 import PyKey60
+from pykey.pykey60 import PyKey60  #Note:  In order for this import to work you will need the file pykey/pykey60.py in a folder called pykey on your board
 
 hardwaredef = PyKey60(nkro=False)
 
