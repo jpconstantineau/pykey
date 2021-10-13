@@ -8,7 +8,7 @@ import usb_hid
 import pwmio
 import rainbowio
 from adafruit_hid.keyboard import Keyboard
-from pykey.keycode import PK_Keycode as KC
+from pykey.keycode import KB_Keycode as KC
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 
 # Hardware definition: GPIO where RGB LED is connected.
