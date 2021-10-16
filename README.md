@@ -21,7 +21,7 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 | VColChoc44  | [PyKey60](https://circuitpython.org/board/jpconstantineau_pykey60/)  | |
 | EncoderPad RP2040 | [EncoderPad RP2040](https://circuitpython.org/board/raspberry_pi_pico/) | |
 | EncoderPad Basic | [Seeeduino XIAO - Keyboard Optimized](https://circuitpython.org/board/seeeduino_xiao_kb/) | |
-| EncoderPad Wireless | [BlueMicro840 - UF2 Download](https://circuitpython.org/board/seeeduino_xiao_kb/) | |
+| EncoderPad Wireless | [BlueMicro840](https://circuitpython.org/board/seeeduino_xiao_kb/) | |
 
 
 ## Documentation
