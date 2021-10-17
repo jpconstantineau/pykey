@@ -131,12 +131,9 @@ while True:
                     kpd.release(item)
 ```
 
-
-## Pinout
-
-## PCB
-
 ## Schematic
+
+![schematic](/img/Schematic-4x4macropadv1.png)
 
 ## Build Guide
 
