@@ -62,6 +62,7 @@ Copy the collowing to `code.py`
 
 ``` python
 # SPDX-FileCopyrightText: 2021 Pierre Constantineau
+# SPDX-License-Identifier: MIT
 # Raspberry Pi Pico 4x4 Macropad 
 """
     Code adapted from the following sources:

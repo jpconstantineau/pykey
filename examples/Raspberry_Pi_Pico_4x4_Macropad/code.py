@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2021 Pierre Constantineau
+# SPDX-License-Identifier: MIT
 # Raspberry Pi Pico 4x4 Macropad
 """
     Code adapted from the following sources:
@@ -39,7 +40,7 @@ keymap = [
     ("Select all", [Keycode.LEFT_CONTROL, Keycode.A]),
     ("Cut", [Keycode.LEFT_CONTROL, Keycode.X]),
     ("Copy", [Keycode.LEFT_CONTROL, Keycode.C]),
-    ("Paste", [Keycode.LEFT_CONTROL, Keycode.V])
+    ("Paste", [Keycode.LEFT_CONTROL, Keycode.V]),
 ]
 
 print("keymap:")
