@@ -21,7 +21,7 @@ const features = [
     imageUrl: 'http://blog.tindie.com/wp-content/uploads/2014/09/adafruit-logo.png',
     description: (
       <>
-        Adafruit has been making electronics easy and fun to learn for more than a decade.  The Adafruit Feather nRF52832 was the first board that made BLE available to anyone who would want to build their own BLE devices, including keyboards.  By leveraging the bootloaders and libraries Adafruit has created, we have the entire maker community helping improving our firmware.
+        Adafruit has been making electronics easy and fun to learn for more than a decade. 
       </>
     ),
   },
@@ -30,7 +30,7 @@ const features = [
     imageUrl: 'https://www.nordicsemi.com/-/media/Images/Logos/LogoTransRGBVerticalWhiteSquare.svg',
     description: (
       <>
-        CircuitPython supports the most successful BLE SoC family in the Maker Community.  The nRF552840 is powerful with an 32-bit ARM® Cortex™-M4 CPU running at 64 MHz.  Uses the Nordic SoftDevices: Bluetooth protocol stacks that are pre-compiled binaries and BLE qualified when delivered, they are unaffected by the ‘develop and compile’ cycle of application development and always remain stable.
+        CircuitPython supports the most successful BLE SoC family in the Maker Community.  The nRF52840 is powerful with an 32-bit ARM® Cortex™-M4 CPU running at 64 MHz.  Uses the Nordic SoftDevices: Bluetooth protocol stacks that are pre-compiled binaries and BLE qualified when delivered, they are unaffected by the ‘develop and compile’ cycle of application development and always remain stable.
       </>
     ),
   },

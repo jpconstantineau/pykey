@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'CircuitPython Keyboard Firmware',
+  title: 'CircuitPython Keyboard Firmware and Hardware',
   tagline: 'Keeping simplicity into programming Keyboards',
   url: 'http://pykey.jpconstantineau.com/',
   baseUrl: '/',
@@ -9,7 +9,7 @@ module.exports = {
   projectName: 'pykey', 
   themeConfig: {
     navbar: {
-      title: 'CircuitPython Keyboard Firmware',
+      title: 'CircuitPython Keyboard Firmware and Hardware',
       logo: {
         alt: 'BlueMicro Logo',
         src: 'img/logo.png',

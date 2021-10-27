@@ -7,8 +7,11 @@ slug: /
 
 # What is PyKey?
 
-**PyKey** or "**Py**thon**Key**board" is a CircuitPython firmware based on the various examples contained in the [Adafruit learning guides](https://learn.adafruit.com/guides/popular) available in their [GitHub repository](https://github.com/adafruit/Adafruit_Learning_System_Guides).
+**PyKey** or "**Py**thon**Key**board" is a CircuitPython firmware based on the various examples contained in the [Adafruit learning guides](https://learn.adafruit.com/guides/popular) available in their [GitHub repository](https://github.com/adafruit/Adafruit_Learning_System_Guides) and is targeted to be user friendly and be a starting point into the world of CircuitPython and Keyboards.
 
+More advanced users may want to move towards [KMK](https://github.com/jpconstantineau/kmk_firmware).  If you are familiar with QMK, KMK may be more interesting for you.
+
+A number of keyboards created by JPConstantineau (Such as the [PyKey60 Keyboard](https://circuitpython.org/board/jpconstantineau_pykey60/)) are also named with the **PyKey** name but these have additional characters added to indicate the configuration of the keyboard. 
 
 ## Why CircuitPython and not C/C++?
 Many Keyboard firmwares are available in C/C++.  Take for example TMK, QMK, BlueMicro_BLE, ZMK and many others.  They all implement a firmware that combine the low-level hardware scanning as well as the high-level keyboard functionality that users want.
@@ -23,7 +26,7 @@ CircuitPython also makes it very simple to customize the keymaps and the keyboar
 # Getting Started
 ## Get some supported hardware. 
 
- Lots of hardware supports CircuitPython. Currently, 237 boards support it.  Not all are destined to be keyboards. 
+ Lots of hardware supports CircuitPython. Currently, 242 boards support it.  Not all are destined to be keyboards. 
  Keyboards that support one of the breakout boards listed in the [CircuitPython Downloads](https://circuitpython.org/downloads) is a good start.  There are even macropads in the list.
 
  Here are a few examples in pictures:

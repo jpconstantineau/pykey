@@ -1,7 +1,7 @@
 ---
 id: features
-title: Features Compared
-sidebar_label: Features Compared
+title: Choosing Firmnware Platform
+sidebar_label: Choosing Firmnware Platfor
 slug: /features
 ---
 
