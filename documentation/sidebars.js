@@ -8,8 +8,7 @@ module.exports = {
                       'testing_hardware/findingbuttons',
                       'testing_hardware/findingmatrix',
                       'testing_hardware/neopixels',
-                      'testing_hardware/sound',
-                      'testing_hardware/sleep'],
+                      'testing_hardware/sound'],
     'Keyboards/Macropads': ['hardware/4x4macropad',
                       'hardware/5x5macropad',
                       'hardware/gridmx47',
@@ -21,6 +20,7 @@ module.exports = {
                   'firmware/keymap_api',
                   'firmware/keyboard_loop'],
    'Setup': ['setup/libraries'],
-   'EncoderPad': ['encoderpad/compared']
+   'EncoderPad': ['encoderpad/compared'],
+   'References':['testing_hardware/sleep']
   },
 };

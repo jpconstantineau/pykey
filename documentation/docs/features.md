@@ -1,7 +1,7 @@
 ---
 id: features
 title: Choosing Firmware Platform
-sidebar_label: Choosing Firmware Platfor
+sidebar_label: Choosing Firmware Platform
 slug: /features
 ---
 

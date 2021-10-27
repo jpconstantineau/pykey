@@ -21,7 +21,7 @@ You will get a list of the identifiers on how to call each GPIO for your control
 
 ## Test Outputs: LEDs
 
-The easiest way to test your board and LEDs is to use a simple **blink** program.  You can modify the `LED Setup` section to select the GPIO where your LED is connected to the board.  Change `board.RED_LED` to the GPIO you want to test.
+The easiest way to test your board and LEDs is to use a simple **blink** program.  You can modify the `LED Setup` section to select the GPIO where your LED is connected to the board.  Change `board.RED_LED` to the GPIO you want to test.  Try the example below by changing the pin definition
 
 ``` python
 import board
@@ -45,6 +45,7 @@ Once running, you should see the LED blink at a rate of once per second.
 
 To help test and identify the GPIOs connected to Switches (ones directly wired between the GPIO and GND), you can use the following program and modify the `LED Setup` and `Switch Setup` sections.  Run the program above to validate that there is a LED on the GPIO you select.
 
+Try the example below by changing the pin definition
 
 ``` python
 import time
@@ -73,15 +74,4 @@ while True:
 By pressing the switch, you will turn on the LED.
 See a similar example in a [video](https://youtu.be/37R2OVGrV2w?list=PLjF7R1fz_OOWFqZfqW9jlvQSIUmwn9lWr)
 
-
 PWM Video example: [here](https://youtu.be/Kelr2DD39g8?list=PLjF7R1fz_OOWFqZfqW9jlvQSIUmwn9lWr)
-
-All you need to
-
-miniMACRO5:
-
-MATRIX_COL_PINS { 30, 43, 28, 24, 10}
-
-ENCODER_PAD_A  {26, 8, 15, 17, 9 }
-
-ENCODER_PAD_B  {6, 29, 2, 20, 13 }
