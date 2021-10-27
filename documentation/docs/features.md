@@ -1,7 +1,7 @@
 ---
 id: features
-title: Choosing Firmnware Platform
-sidebar_label: Choosing Firmnware Platfor
+title: Choosing Firmware Platform
+sidebar_label: Choosing Firmware Platfor
 slug: /features
 ---
 
@@ -12,7 +12,7 @@ List of implemented features
 | ---------------------------------------------------------------------------------------------------------------------- |  :-------: |  :-------: |  :-------: | 
 | License                                                                                                                |    MIT     |  MIT    |  GPLV3 |
 | **Connectivity and Power Saving Options**                                                                              |            | | |
-| Low Latency BLE Support                                                                                                |     🚧    | ✅  |  ✅ |
+| Low Latency BLE Support                                                                                                |     ✅    | ✅  |  ✅ |
 | Multi-Device BLE Support (Several Computers)                                                                           |     ❓     |  | |
 | USB HID                                                                                                                |     ✅     |  ✅   | ✅  |
 | Battery Reporting (BLE Battery Service)                                                                                |     🚧     |   | |
@@ -22,27 +22,29 @@ List of implemented features
 | Keymaps and Layers                                                                                                     |     ✅     |   | ✅ |
 | Basic Keycodes                                                                                                         |     ✅     |  ✅  |  ✅  |
 | Basic consumer (Media) Keycodes                                                                                        |     🚧     | ✅  | ✅ |
-| Mouse Keys                                                                                                             |     🚧     |   | |  
-| Hold-Tap (which includes Mod-Tap and Layer-Tap)                                                                        |     🚧     |   | |
+| Mouse Keys                                                                                                             |     🚧     |   | ✅ |  
+| Hold-Tap (which includes Mod-Tap and Layer-Tap)                                                                        |     🚧     |   | ✅ |
 | One Shot Keys                                                                                                          |     🚧     |   | |
 | Combo Keys                                                                                                             |     🚧     |   | |
-| Macros                                                                                                                 |     ✅     |   | |
+| Macros                                                                                                                 |     ✅     |   | ✅ |
 | DuckyScipt Macros                                                                                                      |     🚧     |   | |
 | **Keyboard and Controller Board Hardware Options**                                                                     |            |     | |
-| Ghosted Keys Support                                                                                                   |     🚧     |   | |
-| Split Keyboard Support                                                                                                 |     🚧     |  ❌ | ✅  |
+| Key Matrix Support                                                                                                     |     ✅     |  ✅ | ✅ |
+| Buttons Support (Keys connected directly to GPIOs) [^1]                                                                |     ✅     |   |  |
+| Shift Registers Support (Keys connected to Shift Registers)  [^1]                                                      |     ✅     |   |  |
+| Split Keyboard Support                                                                                                 |            |  ❌ | ✅  |
 | Key Backlight LED PWM Control                                                                                          |     🚧    |   | |
-| RGB Underglow                                                                                                          |     🚧     |   | |
-| Encoders                                                                                                               |     🚧     |   | |
+| RGB Key Backlight                                                                                                      |     ✅     |   | ✅ |
+| Encoders                                                                                                               |     ✅     |   | ✅ |
 | OLED Display Support                                                                                                   |     🚧     |  | |
 | Audio/Speaker Support                                                                                                  |     🚧     |   | |
 | Low Power Mode (VCC Shutoff)                                                                                           |     🚧     |   |   ✅ |
 | **Microcontroller Support**                                                                                            |            |     | |
-| Support for Nordic nRF52 Microcontrollers  [^1]                                                                        |     ✅     |  ✅  |  ✅  |
-| Support for Wide Range of ARM Microcontrollers  [^1]                                                                   |     ✅     |   | |
+| Support for Nordic nRF52 Microcontrollers  [^2]                                                                        |     ✅     |  ✅  |  ✅  |
+| Support for Wide Range of ARM Microcontrollers  [^2]                                                                   |     ✅     |   | ✅ |
 | Support for AVR/8 Bit Microcontrollers                                                                                 |     ❌     |  ❌   | ❌ |
 | **Tooling and Build Configuration**                                                                                    |            |      | |
-| Serial Debug CLI [^2]                                                                                                  |      ✅   |     | | 
+| Serial Debug CLI [^3]                                                                                                  |      ✅   |   ✅   |  ✅ | 
 | Web Bluetooth Configuration                                                                                            |      💡    |    | |
 | Hardware Troubleshooting tools                                                                                         |      ✅   |     | |
 | Realtime Keymap Updating                                                                                               |      ✅     |  ✅   | ✅ |
@@ -52,8 +54,9 @@ This __Features Compared__ page is licenced under [CC-BY-NC-SA-4.0](https://crea
 
 **Notes**
 
-[^1]: Requires CircuitPython Support
-[^2]: REPL
+[^1]: Supported through keypad module
+[^2]: Requires CircuitPython Support
+[^3]: REPL
 
 
 

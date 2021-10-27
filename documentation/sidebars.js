@@ -1,7 +1,7 @@
 module.exports = {
   someSidebar: {
     'Introduction': ['getting_started','hardware','features'],
-    'Testing Hardware': ['testing_hardware/basic',
+    'Testing Your Hardware': ['testing_hardware/basic',
                       'testing_hardware/encoders',
                       'testing_hardware/analog',
                       'testing_hardware/keymatrix',
