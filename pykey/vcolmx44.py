@@ -2,9 +2,9 @@
 #
 # SPDX-License-Identifier: MIT
 """
-`jpconstantineau_pykey60`
+`jpconstantineau_pykey`
 ================================================================================
-A helper library for JPConstantineau's EncoderPads (Basic, Pro/Wireless, RP2040 (RGB))
+A helper library for JPConstantineau's MX version of the Atreus (vcolmx44)
 * Author(s): Pierre Constantineau
 
 Implementation Notes

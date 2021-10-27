@@ -4,7 +4,7 @@
 """
 `jpconstantineau_pykey60`
 ================================================================================
-A helper library for JPConstantineau's EncoderPads (Basic, Pro/Wireless, RP2040 (RGB))
+A helper library for JPConstantineau's Choc Low Profile version of the Atreus (vcolchoc44)
 * Author(s): Pierre Constantineau
 
 Implementation Notes

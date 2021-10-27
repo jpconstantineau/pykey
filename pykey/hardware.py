@@ -30,6 +30,7 @@ import usb_hid
 from adafruit_hid.keyboard import Keyboard
 from pykey.BitmapKeyboard import BitmapKeyboard
 
+
 class KB_Hardware:
     """
     Class representing a keyboard Hardware without the specifics...
@@ -37,12 +38,11 @@ class KB_Hardware:
 
     def __init__(self, nkro: bool = False):
 
-
         self._board_type = os.uname().machine
         self._keyboard = None
         self._pixels = None
         self._leds = None
-        self._speaker =  None
+        self._speaker = None
         self._nkro = nkro
         self._key_to_position = None
         self._position_to_key = None
@@ -145,4 +145,3 @@ class KB_Hardware:
             else:
                 self._keyboard = Keyboard(usb_hid.devices)
         return self._keyboard
-
