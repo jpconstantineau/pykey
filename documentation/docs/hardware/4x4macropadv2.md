@@ -1,7 +1,7 @@
 ---
-id: 4x4macropad
-title: Raspberry Pi Pico 4x4 Macropad
-sidebar_label: 4x4 Macropad V1
+id: 4x4macropadv2
+title: Raspberry Pi Pico 4x4 Macropad V2
+sidebar_label: 4x4 Macropad V2
 ---
 
 
@@ -52,8 +52,8 @@ from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 kpd = Keyboard(usb_hid.devices)
 keyboard_layout = KeyboardLayoutUS(kpd)
 
-# define keys for 4x4 v1
-keys = keypad.KeyMatrix(
+# define keys for 4x4 v2 TODO update keys
+keys = keypad.Keys(
     row_pins=(board.GP0, board.GP1, board.GP2, board.GP3),
     column_pins=(board.GP4, board.GP5, board.GP6, board.GP7),
     columns_to_anodes=True,
@@ -107,7 +107,6 @@ while True:
 ## Schematic
 
 ![schematic](/img/Schematic-4x4macropadv1.png)
-
 ## PCB
 
 ### Top of PCB
@@ -118,18 +117,15 @@ while True:
 
 <img src="http://pykey.jpconstantineau.com/img/4x4picov1bottom.svg" width="500" /> 
 
+
 ## Build Instructions - Summarized
 
 **Bottom PCB**
 - Solder RPI Pico on bottom plate
 
-**Top PCB**
-- Solder Diodes on Top Plate - make sure that the band on the diode is near the heavier line of on the silkscreen - or the square pad (depends on the top plate)
-
-![diodes](https://github.com/jpconstantineau/ErgoTravel/blob/master/images/diodes.JPG?raw=true)
 
 **Join Top/Bottom PCB**
-- Cut the headers and sockets in group of 4.  
+- Cut the headers and sockets in 4 groups of sufficient length.  
 - Join/connect the Header and Socket groups together 
 - Line up the top/bottom PCB so that the sockets are all on the same side (top or bottom - I usually have the pins at the bottom) 
 - make sure that the top plate can be read and has the same orientation as the bottom plate (Need pictures)

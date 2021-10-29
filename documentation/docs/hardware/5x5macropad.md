@@ -23,6 +23,14 @@ Buy it on [Tindie](https://www.tindie.com/products/jpconstantineau/raspberry-pi-
 
 ## PCB
 
+### Top of PCB
+
+<img src="http://pykey.jpconstantineau.com/img/5x5picov1top.svg" width="700" /> 
+
+### Bottom of PCB
+
+<img src="http://pykey.jpconstantineau.com/img/5x5picov1bottom.svg" width="700" /> 
+
 ## Schematic
 
 ## Build Guide

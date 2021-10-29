@@ -41,11 +41,11 @@ Just like CircuitPython, this keyboard is targeted for beginners. The design kee
 
 ### Top of PCB
 
-<img src="http://pykey.jpconstantineau.com/img/pykey60-top.svg" width="500" /> 
+<img src="http://pykey.jpconstantineau.com/img/pykey60-top.svg" width="700" /> 
 
 ### Bottom of PCB
 
-<img src="http://pykey.jpconstantineau.com/img/pykey60-bottom.svg" width="500" /> 
+<img src="http://pykey.jpconstantineau.com/img/pykey60-bottom.svg" width="700" /> 
 
 ## Schematic
 
