@@ -10,6 +10,7 @@ module.exports = {
                       'testing_hardware/neopixels',
                       'testing_hardware/sound'],
     'Keyboards/Macropads': ['hardware/4x4macropad',
+                      'hardware/4x4macropadv2',
                       'hardware/5x5macropad',
                       'hardware/gridmx47',
                       'hardware/offsetmx43',

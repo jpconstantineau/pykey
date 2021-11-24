@@ -52,11 +52,14 @@ from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 kpd = Keyboard(usb_hid.devices)
 keyboard_layout = KeyboardLayoutUS(kpd)
 
-# define keys for 4x4 v2 TODO update keys
+# define keys for 4x4 v2
 keys = keypad.Keys(
-    row_pins=(board.GP0, board.GP1, board.GP2, board.GP3),
-    column_pins=(board.GP4, board.GP5, board.GP6, board.GP7),
-    columns_to_anodes=True,
+    pins=(  board.GP3, board.GP4,  board.GP21, board.GP22,  
+            board.GP6, board.GP5,  board.GP20, board.GP19,
+            board.GP7, board.GP8,  board.GP17, board.GP18,
+            board.GP10,board.GP9,  board.GP16, board.GP15, 
+          ),
+    value_when_pressed=False
 )
 
 
@@ -111,11 +114,11 @@ while True:
 
 ### Top of PCB
 
-<img src="http://pykey.jpconstantineau.com/img/4x4picov1top.svg" width="500" /> 
+<img src="http://pykey.jpconstantineau.com/img/4x4picov2top.svg" width="500" /> 
 
 ### Bottom of PCB
 
-<img src="http://pykey.jpconstantineau.com/img/4x4picov1bottom.svg" width="500" /> 
+<img src="http://pykey.jpconstantineau.com/img/4x4picov2bottom.svg" width="500" /> 
 
 
 ## Build Instructions - Summarized
