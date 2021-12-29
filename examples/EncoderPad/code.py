@@ -109,16 +109,16 @@ while not_sleeping:
         group = layers[layer_index].macros[key_number][2]
         color = layers[layer_index].macros[key_number][0]
         if key_event.pressed:
-            macropad.pixels[key_number] = 0xFFFFFF
-            macropad.pixels.show()
+            #macropad.pixels[key_number] = 0xFFFFFF
+            #macropad.pixels.show()
             for item in group:
                 if isinstance(item, int):
                     macropad.keyboard.press(item)
                 else:
                     macropad.keyboard_layout.write(item)
         else:
-            macropad.pixels[key_number] = color
-            macropad.pixels.show()
+            #macropad.pixels[key_number] = color
+            #macropad.pixels.show()
             for item in group:
                 if isinstance(item, int):
                     if item >= 0:
@@ -127,11 +127,18 @@ while not_sleeping:
     position = macropad.encoder
     if position != last_position:
         diff=position-last_position
+        #print(diff)
         if diff>0:
-            group = layers[layer_index].encoder[0][2]
+            if diff >1:
+                group = layers[layer_index].encoder[2][2]
+            else:
+                group = layers[layer_index].encoder[0][2]
 
         else:
-            group = layers[layer_index].encoder[1][2]
+            if diff < -1:
+                group = layers[layer_index].encoder[3][2]
+            else:
+                group = layers[layer_index].encoder[1][2]
         for item in group:
             if isinstance(item, int):
                 macropad.keyboard.send(item)

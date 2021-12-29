@@ -127,11 +127,18 @@ while not_sleeping:
     position = macropad.encoder
     if position != last_position:
         diff=position-last_position
+        #print(diff)
         if diff>0:
-            group = layers[layer_index].encoder[0][2]
+            if diff >1:
+                group = layers[layer_index].encoder[2][2]
+            else:
+                group = layers[layer_index].encoder[0][2]
 
         else:
-            group = layers[layer_index].encoder[1][2]
+            if diff < -1:
+                group = layers[layer_index].encoder[3][2]
+            else:
+                group = layers[layer_index].encoder[1][2]
         for item in group:
             if isinstance(item, int):
                 macropad.keyboard.send(item)

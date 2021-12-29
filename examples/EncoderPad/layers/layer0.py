@@ -3,7 +3,9 @@ from adafruit_hid.keycode import Keycode as KC # REQUIRED if using KC.* values
 layer = {                    # REQUIRED dict, must be named 'layer'
     'name' : 'Layer 0', # Application name
     'encoder' : [ (0x202000, 'LEFT', [ KC.LEFT_ARROW ]),
-                  (0x202000, 'RIGHT',[ KC.RIGHT_ARROW ])
+                  (0x202000, 'RIGHT',[ KC.RIGHT_ARROW ]),
+                  (0x202000, 'FASTL',[ KC.A ]),
+                  (0x202000, 'FASTR',[ KC.B ])
     ],
     'macros' : [           # keys ...
         # COLOR    LABEL    KEY SEQUENCE

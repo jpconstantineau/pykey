@@ -43,12 +43,13 @@ The following assumes you have a BlueMicro840 controller.  If yours uses a Xiao 
 
 ## With KMK
 
-
 **Notes:  KMK does not support speaker or the back-lit LEDs of the CNCEncoderpad**
 
 - Install CircuitPython as per instructions for PyKey firmware
 - Install core libraries as per instructions for PyKey firmware
-- Copy the whole KMK folder from the KMK [repo](https://github.com/jpconstantineau/pykey/tree/main/pykey) into the root of the "CIRCUITPY" drive
+- Copy the whole KMK folder from the KMK_Firmware [repo](https://github.com/KMKfw/kmk_firmware/tree/master/kmk) into the root of the "CIRCUITPY" drive
+- Copy the kb.py from the boards folder into the root of the "CIRCUITPY" drive (not available yet)
+- Copy/rename the CNCEncoperPad.py from the user_keymaps folder to code.py into the root of the "CIRCUITPY" drive (not available yet)
 
 
 
