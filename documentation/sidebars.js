@@ -21,7 +21,9 @@ module.exports = {
                   'firmware/keymap_api',
                   'firmware/keyboard_loop'],
    'Setup': ['setup/libraries'],
-   'EncoderPad': ['encoderpad/compared'],
+   'EncoderPad': ['encoderpad/compared',
+                  'encoderpad/basic_setting_up',
+                  'encoderpad/wl_setting_up'],
    'References':['testing_hardware/sleep']
   },
 };
