@@ -62,7 +62,7 @@ while True:
                     if item >= 0:
                         kpd.press(item)
                     else:
-                        kpdrelease(-item)
+                        kpd.release(-item)
                 else:
                     keyboard_layout.write(item)
         else:
