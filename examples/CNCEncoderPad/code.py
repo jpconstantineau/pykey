@@ -3,6 +3,11 @@ import time
 from pykey.encoderpad import EncoderPad
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 
+# the following is needed for BlueMicro840 to turn on external VCC and power up the rotary encoder.
+from digitalio import DigitalInOut, Direction
+vcc = DigitalInOut(board.P0_12)
+vcc.direction = Direction.OUTPUT
+vcc.value = True
 
 macropad = EncoderPad()
 
