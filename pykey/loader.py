@@ -1,6 +1,5 @@
 import os
 
-
 class KB_Loader:
     """
     Class representing a keyboard procesing loop..
@@ -16,19 +15,12 @@ class KB_Loader:
         files.sort()
         for filename in files:
             print(filename)
-            if filename.endswith(".py"):
+            if filename.endswith('.py'):
                 try:
-                    module = __import__(self._folder + "/" + filename[:-3])
+                    module = __import__(self._folder + '/' + filename[:-3])
                     self._layers.append(self._keymapclass(module.layer))
-                except (
-                    SyntaxError,
-                    ImportError,
-                    AttributeError,
-                    KeyError,
-                    NameError,
-                    IndexError,
-                    TypeError,
-                ) as err:
+                except (SyntaxError, ImportError, AttributeError, KeyError, NameError,
+                        IndexError, TypeError) as err:
                     print(err)
                     pass
         return self._layers

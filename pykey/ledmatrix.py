@@ -2,7 +2,8 @@ from digitalio import DigitalInOut, Direction
 
 
 class KB_LEDMatrix:
-    # LEDMatrix(row_pins: Sequence[microcontroller.Pin], column_pins: Sequence[microcontroller.Pin], columns_to_anodes: bool = True)
+# LEDMatrix(row_pins: Sequence[microcontroller.Pin], column_pins: Sequence[microcontroller.Pin], columns_to_anodes: bool = True)
+
 
     def __init__(self, row_pins, column_pins, columns_to_anodes: bool = True):
         self.row_pins = row_pins
@@ -25,7 +26,7 @@ class KB_LEDMatrix:
 
     def led_ON(self, led_number):
         self.reset_leds()
-        colcount = len(self.column_io)
+        colcount=len(self.column_io)
         colIOLED = self.column_io[0]
         rowIOLED = self.row_io[0]
         for rownum, rowIO in enumerate(self.row_io):
@@ -48,3 +49,4 @@ class KB_LEDMatrix:
 
     def led_OFF(self):
         self.reset_leds()
+

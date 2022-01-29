@@ -28,6 +28,10 @@ Implementation Notes
 import os
 import usb_hid
 from adafruit_hid.keyboard import Keyboard
+from adafruit_hid.consumer_control import ConsumerControl
+from adafruit_hid.consumer_control_code import ConsumerControlCode
+from adafruit_hid.mouse import Mouse
+from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 from pykey.BitmapKeyboard import BitmapKeyboard
 
 
@@ -38,22 +42,23 @@ class KB_Hardware:
 
     def __init__(self, nkro: bool = False):
 
+
         self._board_type = os.uname().machine
-        self._keyboard = None
         self._pixels = None
         self._leds = None
-        self._speaker = None
+        self._speaker =  None
         self._nkro = nkro
-        self._key_to_position = None
-        self._position_to_key = None
 
-    @property
-    def key_to_position(self):
-        return self._key_to_position
+        # Define HID:
+        self._keyboard = None
+        self._keyboard_layout = None
+        self._consumer_control = None
+        self._mouse = None
 
-    @property
-    def position_to_key(self):
-        return self._position_to_key
+    ConsumerControlCode = ConsumerControlCode
+
+    Mouse = Mouse
+
 
     @property
     def keys(self):
@@ -145,3 +150,56 @@ class KB_Hardware:
             else:
                 self._keyboard = Keyboard(usb_hid.devices)
         return self._keyboard
+
+    @property
+    def keyboard_layout(self) -> adafruit_hid.keyboard_layout_base.KeyboardLayoutBase:
+        """
+        Map ASCII characters to the appropriate key presses on a standard US PC keyboard.
+        Non-ASCII characters and most control characters will raise an exception. Required to send
+        a string of characters.
+        The following example sends the string ``"Hello World"`` when the rotary encoder switch is
+        pressed.
+        .. code-block:: python
+            from adafruit_macropad import MacroPad
+            macropad = MacroPad()
+            while True:
+                if macropad.encoder_switch:
+                    macropad.keyboard_layout.write("Hello World")
+        """
+        if self._keyboard_layout is None:
+            # This will need to be updated if we add more layouts. Currently there is only US.
+            self._keyboard_layout = KeyboardLayoutUS(self.keyboard)
+        return self._keyboard_layout
+
+    @property
+    def consumer_control(self) -> adafruit_hid.consumer_control.ConsumerControl:
+        """
+        Send ConsumerControl code reports, used by multimedia keyboards, remote controls, etc.
+        The following example decreases the volume when the rotary encoder switch is pressed.
+        .. code-block:: python
+            from adafruit_macropad import MacroPad
+            macropad = MacroPad()
+            while True:
+                if macropad.encoder_switch:
+                    macropad.consumer_control.send(macropad.ConsumerControlCode.VOLUME_DECREMENT)
+        """
+        if self._consumer_control is None:
+            self._consumer_control = ConsumerControl(usb_hid.devices)
+        return self._consumer_control
+
+    @property
+    def mouse(self) -> adafruit_hid.mouse.Mouse:
+        """
+        Send USB HID mouse reports.
+        The following example sends a left mouse button click when the rotary encoder switch is
+        pressed.
+        .. code-block:: python
+            from adafruit_macropad import MacroPad
+            macropad = MacroPad()
+            while True:
+                if macropad.encoder_switch:
+                    macropad.mouse.click(macropad.Mouse.LEFT_BUTTON)
+        """
+        if self._mouse is None:
+            self._mouse = Mouse(usb_hid.devices)
+        return self._mouse

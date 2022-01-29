@@ -1,8 +1,8 @@
 import time
 import pwmio
 
-
 class KB_Speaker:
+
     def __init__(self, speaker_pin):
 
         self.speaker_pin = speaker_pin
@@ -11,7 +11,7 @@ class KB_Speaker:
 
     def play_startup_tune(self):
         OFF = 0
-        ON = 2 ** 15
+        ON = 2**15
         self.buzzer.duty_cycle = ON
         self.buzzer.frequency = 440
         time.sleep(0.05)
@@ -23,7 +23,7 @@ class KB_Speaker:
 
     def play_shutdown_tune(self):
         OFF = 0
-        ON = 2 ** 15
+        ON = 2**15
         self.buzzer.duty_cycle = ON
         self.buzzer.frequency = 1660
         time.sleep(0.05)
@@ -31,15 +31,4 @@ class KB_Speaker:
         time.sleep(0.1)
         self.buzzer.frequency = 440
         time.sleep(0.15)
-        self.buzzer.duty_cycle = OFF
-
-    def start_tone(self, frequency):
-        OFF = 0
-        ON = 2 ** 15
-        self.buzzer.frequency = frequency
-        self.buzzer.duty_cycle = ON
-
-    def stop_tone(self):
-        OFF = 0
-        ON = 2 ** 15
         self.buzzer.duty_cycle = OFF
