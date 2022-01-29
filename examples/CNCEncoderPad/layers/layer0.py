@@ -1,15 +1,17 @@
-from pykey.keycode import PK_Keycode as KC # REQUIRED if using KC.* values
+from adafruit_hid.keycode import Keycode as KC # REQUIRED if using KC.* values
 
 layer = {                    # REQUIRED dict, must be named 'layer'
     'name' : 'Layer 0', # Application name
-    'encoder' : [ (0x202000, 'LEFT', [ KC.LEFT ]),
-                  (0x202000, 'RIGHT',[ KC.RIGHT ])
+    'encoder' : [ (0x202000, 'LEFT', [ KC.LEFT_ARROW ]),
+                  (0x202000, 'RIGHT',[ KC.RIGHT_ARROW ]),
+                  (0x202000, 'FASTL',[ KC.A ]),
+                  (0x202000, 'FASTR',[ KC.B ])
     ],
     'macros' : [           # keys ...
         # COLOR    LABEL    KEY SEQUENCE
-        (0x202000, '1', [ KC.ONE ]),
-        (0x202000, '2', [ KC.TWO ]),
-        (0x202000, '3', [ KC.THREE ]),
+        (0x200000, '1', [ KC.ONE ]),
+        (0x002000, '2', [ KC.TWO ]),
+        (0x000020, '3', [ KC.THREE ]),
         (0x202000, '4', [ KC.FOUR ]),
         (0x101010, '5', [ KC.FIVE ]),
         (0x202000, '6', [ KC.SIX ]),
